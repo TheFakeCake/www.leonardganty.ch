@@ -1,16 +1,72 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  /* Page Footer */
+  .page-footer {
+    @apply flex-grow pt-4 px-1 pb-0.5 text-gray-100 text-center;
 
-* {
-  box-sizing: border-box;
+    background: #810e11;
+    position: relative;
+    z-index: 1000;
+  }
+  .page-footer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 99.6%;
+    height: calc(100vw / 45 * 1.1);
+    background: url('../public/images/footer-wave.svg') center bottom/110%
+      no-repeat;
+  }
+
+  /* Burger Button component */
+  .burger-btn {
+    --size: 2rem;
+
+    display: inline-block;
+    position: relative;
+    width: var(--size, 2rem);
+    height: var(--size, 2rem);
+    vertical-align: middle;
+    border: none;
+    border-radius: 50%;
+  }
+  .burger-btn .burger-line {
+    position: absolute;
+    background-color: var(--color, currentColor);
+    width: 100%;
+    height: calc(var(--size, 2rem) / 16);
+    transition: transform 0.3s, opacity 0.3s, top 0.3s, background-color 0.3s,
+      color 0.3s;
+  }
+  .burger-btn .burger-line.top {
+    top: 15%;
+  }
+  .burger-btn .burger-line.middle {
+    width: 90%;
+    top: calc(50% - (var(--size, 2rem) / 24));
+    left: 5%;
+  }
+  .burger-btn .burger-line.bottom {
+    top: calc(85% - (var(--size, 2rem) / 16));
+  }
+
+  .burger-btn.toggled .burger-line {
+    background-color: var(--toggled-color, var(--color, currentColor));
+    top: calc(50% - (var(--size, 2rem) / 24));
+  }
+  .burger-btn.toggled .burger-line.top {
+    transform: rotate(315deg);
+  }
+  .burger-btn.toggled .burger-line.middle {
+    transform: rotate(225deg);
+    opacity: 0;
+  }
+  .burger-btn.toggled .burger-line.bottom {
+    transform: rotate(225deg);
+  }
 }
