@@ -6,7 +6,7 @@ const classes = `
   active:bg-red-900
 `;
 
-const Button = React.forwardRef(({ onClick, href, children }, ref) => {
+const Button = React.forwardRef(({ href, onClick, type, children }, ref) => {
   if (href) {
     return (
       <a className={classes} href={href} onClick={onClick} ref={ref}>
@@ -15,7 +15,12 @@ const Button = React.forwardRef(({ onClick, href, children }, ref) => {
     );
   }
   return (
-    <button className={classes} onClick={onClick} ref={ref}>
+    <button
+      className={classes}
+      onClick={onClick}
+      type={type ?? 'button'}
+      ref={ref}
+    >
       {children}
     </button>
   );

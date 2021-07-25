@@ -7,7 +7,7 @@ function BurgerButton({ className, onClick, toggled, ...otherProps }) {
         (toggled ? ' toggled' : '')
       }
       onClick={onClick}
-      role="button"
+      type="button"
       aria-controls={otherProps['aria-controls']}
       aria-label={otherProps['aria-label']}
       aria-expanded={toggled}
