@@ -1,0 +1,60 @@
+.map-popup {
+  @apply absolute -translate-x-1/2 w-max px-3 py-2 rounded drop-shadow bg-gray-50;
+  bottom: calc(100% + 8px);
+}
+
+.map-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 8px);
+  width: 0;
+  height: 0;
+  @apply border-gray-50;
+  border-top-width: 8px;
+  border-left: solid 8px transparent;
+  border-right: solid 8px transparent;
+}
+
+.map-popup .map-popup-close-btn {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+  width: 2rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.map-popup .map-popup-close-btn::before {
+  content: '✕';
+}
+
+.map-popup .map-popup-close-btn:hover {
+  opacity: 1;
+}
+
+/* Openlayers overrides */
+.ol-attribution {
+  bottom: var(--footer-wave-height) !important;
+  @apply bg-white bg-opacity-60 !important;
+}
+.ol-attribution li {
+  @apply mr-2 text-sm text-gray-700;
+}
+.ol-attribution li:last-child {
+  @apply mr-0;
+}
+.ol-attribution a {
+  @apply underline hover:text-red-800;
+}
+
+.ol-control button {
+  @apply bg-red-800 bg-opacity-50 !important;
+}
+.ol-control button:hover,
+.ol-control button:focus {
+  @apply bg-red-800 bg-opacity-70 !important;
+}

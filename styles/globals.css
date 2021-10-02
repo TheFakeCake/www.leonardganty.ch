@@ -9,6 +9,8 @@
 }
 
 @layer components {
+  @import './map.css';
+
   /* Page Footer */
   .page-footer {
     @apply flex-grow pt-4 px-1 pb-0.5 text-gray-100 text-center;
