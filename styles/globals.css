@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --footer-wave-height: calc(100vw / 45 * 1.1);
+  }
+}
+
 @layer components {
   /* Page Footer */
   .page-footer {
@@ -18,7 +24,7 @@
     left: 0;
     right: 0;
     bottom: 99.6%;
-    height: calc(100vw / 45 * 1.1);
+    height: var(--footer-wave-height);
     background: url('../public/images/footer-wave.svg') center bottom/110%
       no-repeat;
   }
