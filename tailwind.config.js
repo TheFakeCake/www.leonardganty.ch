@@ -10,6 +10,17 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      serif: [
+        'Lora',
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        'Times New Roman',
+        'Times',
+        'serif',
+      ],
+    },
     extend: {
       height: {
         112: '28rem',
