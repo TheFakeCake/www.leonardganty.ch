@@ -26,12 +26,11 @@ function PageFooter() {
         </a>
       </address>
 
-      <a className="inline-block mt-6" href="https://mouvementetsante.ch/">
+      <a className="inline-block mt-6 transition hover:scale-105" href="https://mouvementetsante.ch/">
         <Image
           src={logoMouvementEtSante}
           alt="Logo de Mouvement et Santé"
           title="Le cabinet Mouvement et Santé dans lequel Léonard Ganty pratique l'acupuncture"
-          className="transition hover:scale-95"
           width={176}
           height={50}
           objectFit="contain"
