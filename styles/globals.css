@@ -19,6 +19,7 @@
     position: relative;
     z-index: 1000;
   }
+
   .page-footer::before {
     content: '';
     display: block;
@@ -27,8 +28,7 @@
     right: 0;
     bottom: 99.6%;
     height: var(--footer-wave-height);
-    background: url('../public/images/footer-wave.svg') center bottom/110%
-      no-repeat;
+    background: url('../public/images/footer-wave.svg') center bottom/110% no-repeat;
   }
 
   /* Burger Button component */
@@ -43,22 +43,25 @@
     border: none;
     border-radius: 50%;
   }
+
   .burger-btn .burger-line {
     position: absolute;
     background-color: var(--color, currentColor);
     width: 100%;
     height: calc(var(--size, 2rem) / 16);
-    transition: transform 0.3s, opacity 0.3s, top 0.3s, background-color 0.3s,
-      color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, top 0.3s, background-color 0.3s, color 0.3s;
   }
+
   .burger-btn .burger-line.top {
     top: 15%;
   }
+
   .burger-btn .burger-line.middle {
     width: 90%;
     top: calc(50% - (var(--size, 2rem) / 24));
     left: 5%;
   }
+
   .burger-btn .burger-line.bottom {
     top: calc(85% - (var(--size, 2rem) / 16));
   }
@@ -67,13 +70,16 @@
     background-color: var(--toggled-color, var(--color, currentColor));
     top: calc(50% - (var(--size, 2rem) / 24));
   }
+
   .burger-btn.toggled .burger-line.top {
     transform: rotate(315deg);
   }
+
   .burger-btn.toggled .burger-line.middle {
     transform: rotate(225deg);
     opacity: 0;
   }
+
   .burger-btn.toggled .burger-line.bottom {
     transform: rotate(225deg);
   }
