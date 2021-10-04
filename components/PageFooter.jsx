@@ -5,7 +5,7 @@ import logoASCA from '../public/images/logo-asca.png';
 import logoRME from '../public/images/logo-rme.svg';
 
 function PageFooter() {
-  const emailAddress = 'leonard' + '@gant' + 'y.ch';
+  const emailAddress = 'therapie' + '@gant' + 'y.ch';
   const year = new Date().getFullYear();
   return (
     <footer className="page-footer">
