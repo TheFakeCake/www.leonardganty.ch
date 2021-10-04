@@ -37,7 +37,7 @@ function PageHeader() {
 
   return (
     <header
-      className="fixed top-0 z-max w-full h-16 px-4 py-1 bg-red-800 text-gray-100 shadow-md flex justify-between"
+      className="fixed top-0 z-max w-full h-16 px-4 py-1 bg-primary text-gray-100 shadow-md flex justify-between"
       role="banner"
     >
       <Link href="/">
@@ -56,12 +56,12 @@ function PageHeader() {
 
       <nav
         className={
-          'bg-red-800 fixed top-16 right-0 bottom-0 left-0 pr-4 pt-10 lg:static lg:block lg:pr-0 lg:pt-0' +
+          'bg-primary fixed top-16 right-0 bottom-0 left-0 pr-4 pt-10 lg:static lg:block lg:pr-0 lg:pt-0' +
           (showNav ? ' block' : ' hidden')
         }
         id="mainNav"
       >
-        <ul className={'flex flex-col items-end text-3xl lg:flex-row lg:text-lg'}>
+        <ul className="flex flex-col items-end text-3xl lg:flex-row lg:text-lg">
           {navItems.map(({ href, label }) => {
             let anchorClasses = 'pb-2 border-b-2';
             if (router.asPath === href) {
@@ -72,7 +72,7 @@ function PageHeader() {
                 <Link href={href}>
                   <a
                     className={
-                      'pb-2 border-b-2 lg:border-b-0 lg:hover:text-yellow-200' +
+                      'pb-2 border-b-2 hover:text-yellow-200 hover:border-yellow-200 focus:outline-none focus:ring-2 ring-yellow-200 ring-offset-4 ring-offset-primary lg:border-b-0' +
                       (router.asPath === href
                         ? ' border-yellow-200 text-yellow-200 lg:border-b-2'
                         : '')

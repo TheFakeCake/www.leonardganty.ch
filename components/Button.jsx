@@ -1,9 +1,9 @@
 import React from 'react';
 
 const classes = `
-  inline-block px-6 py-2 rounded-lg bg-red-800 text-gray-100 font-sans
-  hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg
-  active:bg-red-900
+  inline-block px-6 py-2 rounded-lg bg-primary text-gray-100 font-sans
+  hover:bg-primary-light hover:shadow-lg focus:bg-primary-light focus:shadow-lg
+  active:bg-primary-dark
 `;
 
 const Button = React.forwardRef(({ href, onClick, type, children }, ref) => {

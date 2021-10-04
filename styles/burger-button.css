@@ -5,8 +5,8 @@
   --burger-btn-border-radius: 50%;
   --burger-btn-color: currentColor;
   --burger-btn-toggled-color: var(--burger-btn-color);
-  --burger-btn-hover-bg-color: rgba(0, 0, 0, 0.15);
-  --burger-btn-focus-bg-color: rgba(0, 0, 0, 0.15);
+  --burger-btn-hover-bg-color: theme('colors.primary.dark');
+  --burger-btn-focus-bg-color: var(--burger-btn-hover-bg-color);
   --burger-btn-focus-shadow-color: theme('colors.yellow.200');
 }
 

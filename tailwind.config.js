@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   mode: 'jit',
   purge: {
@@ -22,6 +24,13 @@ module.exports = {
       ],
     },
     extend: {
+      colors: {
+        primary: {
+          light: colors.red['700'],
+          DEFAULT: colors.red['800'],
+          dark: '#810e11',
+        },
+      },
       height: {
         112: '28rem',
         128: '32rem',
