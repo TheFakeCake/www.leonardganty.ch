@@ -12,7 +12,7 @@ function PageFooter() {
       <address className="mb-1 not-italic" aria-label="Adresse">
         Route de Saint-Julien 129
         <br />
-        1228 Plan-les-Ouates
+        CH-1228 Plan-les-Ouates
       </address>
       <address className="mb-1 not-italic" aria-label="Numéro de téléphone">
         +41 79 843 74 82

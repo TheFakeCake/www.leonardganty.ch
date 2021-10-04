@@ -16,6 +16,7 @@ export default function Accueil() {
         <meta name="description" content="Page d'accueil" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <ContentSection title="L'acupuncture">
         <p className="mb-2">
           La médecine traditionnelle chinoise est une pratique ancestrale
@@ -31,6 +32,7 @@ export default function Accueil() {
           exemple.
         </p>
       </ContentSection>
+
       <ContentSection title="Les prises en charge">
         <p className="mb-2">
           Je prends en charge des patients dans un cabinet à Plan-les-Ouates,
@@ -51,7 +53,7 @@ export default function Accueil() {
           </abbr>
           .
         </p>
-        <p className="mb-6">Prix des consultations en cabinet : 110 CHF</p>
+        <p className="mb-8">Prix des consultations en cabinet : 110 CHF</p>
         <div>
           <Image
             src={logoASCA}
@@ -75,16 +77,23 @@ export default function Accueil() {
           />
         </div>
       </ContentSection>
+
       <ContentSection title="Léonard Ganty">
-        <p className="mb-6">
+        <p className="mb-2">
           Physiothérapeute de formation, j’ai eu la chance de pratiquer la
           physiothérapie du sport en cabinet et avec des sportifs professionnels
-          tel que la relève du Genève-Servette Hockey Club. Aujourd’hui, je
-          continue mon activité aux Hôpitaux Universitaires de Genève en plus de
-          ma pratique de l’acupuncture en cabinet et à domicile.
+          tel que la relève du Genève-Servette Hockey Club.
         </p>
-        <Image src={photoLeonard} alt="Photo de Léonard Ganty" />
+        <p className="mb-6">
+          Aujourd’hui, je continue mon activité aux Hôpitaux Universitaires de
+          Genève en plus de ma pratique de l’acupuncture en cabinet et à
+          domicile.
+        </p>
+        <div className="max-w-md mx-auto">
+          <Image src={photoLeonard} alt="Photo de Léonard Ganty" />
+        </div>
       </ContentSection>
+
       <Map />
     </>
   );

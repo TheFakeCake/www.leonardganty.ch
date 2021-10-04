@@ -15,7 +15,7 @@ export default function Map() {
 
   return (
     <div
-      className="relative h-128 lg:h-144"
+      className="relative h-128 lg:h-128"
       aria-labelledby="map-label"
       aria-describedby="map-description"
       ref={rootRef}
