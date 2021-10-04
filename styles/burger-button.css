@@ -1,0 +1,80 @@
+/* Burger Button component */
+:root {
+  --burger-btn-size: 3rem;
+  --burger-btn-padding: 0.5rem;
+  --burger-btn-border-radius: 50%;
+  --burger-btn-color: currentColor;
+  --burger-btn-toggled-color: var(--burger-btn-color);
+  --burger-btn-hover-bg-color: rgba(0, 0, 0, 0.15);
+  --burger-btn-focus-bg-color: rgba(0, 0, 0, 0.15);
+  --burger-btn-focus-shadow-color: theme('colors.yellow.200');
+}
+
+.burger-btn {
+  display: inline-block;
+  position: relative;
+  width: var(--burger-btn-size);
+  height: var(--burger-btn-size);
+  padding: var(--burger-btn-padding);
+  border: none;
+  border-radius: var(--burger-btn-border-radius);
+  vertical-align: middle;
+  transition: background-color 0.15s, box-shadow 0.15s;
+}
+
+.burger-btn:hover {
+  background: var(--burger-btn-hover-bg-color);
+}
+
+.burger-btn:focus {
+  background: var(--burger-btn-focus-bg-color);
+  box-shadow: 0 0 0 0.125rem var(--burger-btn-focus-shadow-color);
+  outline: 0;
+}
+
+.burger-btn .burger-line {
+  --burger-btn-inner-size: calc(var(--burger-btn-size) - var(--burger-btn-padding) - var(--burger-btn-padding));
+  --burger-line-width: var(--burger-btn-inner-size);
+  --burger-line-height: calc(var(--burger-btn-inner-size) / 16);
+
+  position: absolute;
+  left: var(--burger-btn-padding);
+  width: var(--burger-line-width);
+  height: var(--burger-line-height);
+  background-color: var(--burger-btn-color);
+  transition: transform 0.3s, opacity 0.15s, top 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.burger-btn .burger-line.top {
+  top: calc(var(--burger-btn-padding) + (var(--burger-btn-inner-size) * 0.15));
+}
+
+.burger-btn .burger-line.middle {
+  left: calc(var(--burger-btn-padding) + (var(--burger-btn-inner-size) * 0.05));
+  top: calc(50% - (var(--burger-line-height) / 2));
+  width: calc(var(--burger-btn-inner-size) * 0.9);
+}
+
+.burger-btn .burger-line.bottom {
+  top: calc(var(--burger-btn-padding) + (var(--burger-btn-inner-size) * 0.85) - var(--burger-line-height));
+}
+
+/* Toggled state */
+
+.burger-btn.toggled .burger-line {
+  background-color: var(--burger-btn-toggled-color);
+  top: calc(50% - (var(--burger-line-height) / 2));
+}
+
+.burger-btn.toggled .burger-line.top {
+  transform: rotate(225deg);
+}
+
+.burger-btn.toggled .burger-line.middle {
+  transform: rotate(225deg);
+  opacity: 0;
+}
+
+.burger-btn.toggled .burger-line.bottom {
+  transform: rotate(-225deg);
+}
