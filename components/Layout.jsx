@@ -3,9 +3,9 @@ import PageHeader from './PageHeader';
 
 function Layout({ children }) {
   return (
-    <div className="bg-gray-100 font-serif min-h-screen pt-16 flex flex-col">
+    <div className="flex flex-col min-h-screen pt-16 font-serif bg-gray-100">
       <PageHeader />
-      <main role="main">{children}</main>
+      <main>{children}</main>
       <PageFooter />
     </div>
   );
