@@ -24,6 +24,30 @@ module.exports = {
       ],
     },
     extend: {
+      keyframes: {
+        fadeInFromInvisible: {
+          from: {
+            visibility: 'visible',
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          }
+        },
+        fadeOutToInvisible: {
+          from: {
+            opacity: 1,
+          },
+          to: {
+            opacity: 0,
+            visibility: 'hidden',
+          }
+        },
+      },
+      animation: {
+        'fade-in-from-invisible': 'fadeInFromInvisible 200ms linear both',
+        'fade-out-to-invisible': 'fadeOutToInvisible 200ms linear both',
+      },
       colors: {
         primary: {
           light: colors.red['700'],

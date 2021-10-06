@@ -19,7 +19,7 @@
   border: none;
   border-radius: var(--burger-btn-border-radius);
   vertical-align: middle;
-  transition: background-color 0.15s, box-shadow 0.15s;
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-btn:hover {

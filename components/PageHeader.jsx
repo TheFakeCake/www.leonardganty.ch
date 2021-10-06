@@ -16,13 +16,36 @@ const navItems = [
 ];
 
 function PageHeader() {
-  const [showNav, setShowNav] = useState(false);
+  const [navVisible, setNavVisible] = useState(null);
   const router = useRouter();
+
+  const showNav = () => {
+    setNavVisible(true);
+    if (process.browser) {
+      // Prevent page scrolling
+      document.body.classList.add('overflow-y-hidden');
+    }
+  };
+
+  const hideNav = () => {
+    setNavVisible(navVisible === null ? null : false);
+    if (process.browser) {
+      document.body.classList.remove('overflow-y-hidden');
+    }
+  };
+
+  const toggleNavVisible = () => {
+    if (navVisible) {
+      hideNav();
+    } else {
+      showNav();
+    }
+  };
 
   // Add handler on routerChangeComplete event to close the navigation after a
   // new page finished loading
   useEffect(() => {
-    const routeChangeCompleteHandler = () => setShowNav(false);
+    const routeChangeCompleteHandler = hideNav;
 
     router.events.on('routeChangeComplete', routeChangeCompleteHandler);
 
@@ -31,13 +54,20 @@ function PageHeader() {
     };
   });
 
-  function toggleNavHandler() {
-    setShowNav((showNav) => !showNav);
+  const navVisibleClass =
+    navVisible === null
+      ? 'invisible'
+      : navVisible === true
+      ? 'animate-fade-in-from-invisible'
+      : 'animate-fade-out-to-invisible';
+
+  if (process.browser) {
+    document.body.classList.add('lg:overflow-y-auto');
   }
 
   return (
     <header
-      className="fixed top-0 z-max w-full h-16 px-4 py-1 bg-primary text-gray-100 shadow-md flex justify-between"
+      className="fixed top-0 flex justify-between w-full h-16 px-4 py-1 text-gray-100 shadow-md z-max bg-primary"
       role="banner"
     >
       <Link href="/">
@@ -48,16 +78,17 @@ function PageHeader() {
 
       <BurgerButton
         className="self-center lg:hidden"
-        toggled={showNav}
-        onClick={toggleNavHandler}
+        toggled={navVisible}
+        onClick={toggleNavVisible}
         aria-controls="mainNav"
         aria-label="Permuter l'affichage de la navigation"
       />
 
       <nav
         className={
-          'bg-primary fixed top-16 right-0 bottom-0 left-0 pr-4 pt-10 lg:static lg:block lg:pr-0 lg:pt-0' +
-          (showNav ? ' block' : ' hidden')
+          'fixed top-16 bottom-0 left-0 right-0 pt-10 pr-4 bg-primary ' +
+          'lg:static lg:pr-0 lg:pt-0 lg:visible lg:opacity-100 lg:animate-none ' +
+          navVisibleClass
         }
         id="mainNav"
       >
@@ -72,7 +103,9 @@ function PageHeader() {
                 <Link href={href}>
                   <a
                     className={
-                      'pb-2 border-b-2 hover:text-yellow-200 hover:border-yellow-200 focus:outline-none focus:ring-2 ring-yellow-200 ring-offset-4 ring-offset-primary lg:border-b-0' +
+                      'pb-2 border-b-2 hover:text-yellow-200 hover:border-yellow-200 ' +
+                      'focus:outline-none focus:ring-2 ring-yellow-200 ring-offset-4 ring-offset-primary ' +
+                      'transition-shadow lg:border-b-0 lg:pb-0' +
                       (router.asPath === href
                         ? ' border-yellow-200 text-yellow-200 lg:border-b-2'
                         : '')
