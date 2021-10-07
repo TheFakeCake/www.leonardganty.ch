@@ -47,7 +47,7 @@
 }
 
 .ol-attribution li {
-  @apply mr-2 text-sm text-gray-700;
+  @apply mr-2 text-sm;
 }
 
 .ol-attribution li:last-child {
@@ -55,8 +55,8 @@
 }
 
 .ol-attribution a {
-  @apply underline transition hover:text-primary
-    focus:text-primary focus:outline-none focus:ring-2 focus:ring-primary;
+  @apply text-gray-600 transition hover:text-primary
+    focus:text-primary focus:outline-none focus:ring-2 focus:ring-primary !important;
 }
 
 .ol-control button {
