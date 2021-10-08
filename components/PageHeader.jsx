@@ -107,7 +107,7 @@ function PageHeader() {
                       'focus:outline-none focus:ring-2 ring-yellow-200 ring-offset-4 ring-offset-primary ' +
                       'transition-shadow lg:border-b-0 lg:pb-0' +
                       (router.asPath === href
-                        ? ' border-yellow-200 text-yellow-200 lg:border-b-2'
+                        ? ' font-semibold text-yellow-200 border-yellow-200 lg:font-normal lg:border-b-2'
                         : '')
                     }
                     aria-current={router.asPath === href ? 'page' : false}
