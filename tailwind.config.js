@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   mode: 'jit',
@@ -63,6 +64,9 @@ module.exports = {
         160: '40rem',
         192: '48rem',
       },
+      inset: {
+        '13': '3.25rem',
+      },
       zIndex: {
         max: '9999',
       },
@@ -71,5 +75,13 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addVariant, e }) {
+      addVariant('focus-not-visible', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`focus-not-visible${separator}${className}`)}:focus:not(:focus-visible)`
+        })
+      })
+    })
+  ],
 };
