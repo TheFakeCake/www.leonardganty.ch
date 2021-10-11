@@ -49,6 +49,7 @@ module.exports = {
         'fade-out-to-invisible': 'fadeOutToInvisible 200ms linear both',
       },
       colors: {
+        gray: colors.warmGray,
         primary: {
           light: colors.red['700'],
           DEFAULT: colors.red['800'],
