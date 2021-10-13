@@ -1,6 +1,6 @@
 function Logo({ className }) {
   return (
-    <div className={('rounded-full ring-2 ring-current ' + className).trim()}>
+    <div className={('rounded-full border-2 ' + className).trim()}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"

@@ -69,8 +69,8 @@ function PageHeader() {
       role="banner"
     >
       <Link href="/">
-        <a className="link self-center text-yellow-200 rounded-full hover:opacity-100 lg:hidden">
-          <Logo className="w-11 h-11 text-primary-dark ring-black bg-gray-50" />
+        <a className="link self-center rounded-full text-yellow-200 ring-offset-0 hover:opacity-100 lg:hidden">
+          <Logo className="w-12 h-12 text-primary-dark border-black bg-gray-50" />
         </a>
       </Link>
 
@@ -117,7 +117,7 @@ function PageHeader() {
         </ul>
       </nav>
 
-      <Logo className="hidden lg:block absolute top-13 -mt-0.5 w-10 h-10 text-primary-dark bg-gray-50 shadow-md" />
+      <Logo className="hidden lg:block absolute top-13 -mt-0.5 w-10 h-10 text-primary-dark bg-gray-50 border-primary-dark shadow-md" />
     </header>
   );
 }
