@@ -69,8 +69,8 @@ function PageHeader() {
       role="banner"
     >
       <Link href="/">
-        <a className="link text-yellow-200 rounded-full hover:opacity-100 lg:hidden">
-          <Logo className="w-14 h-14 text-primary-dark ring-black bg-gray-50" />
+        <a className="link self-center text-yellow-200 rounded-full hover:opacity-100 lg:hidden">
+          <Logo className="w-11 h-11 text-primary-dark ring-black bg-gray-50" />
         </a>
       </Link>
 
