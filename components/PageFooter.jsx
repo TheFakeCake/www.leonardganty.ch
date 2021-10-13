@@ -61,10 +61,10 @@ function PageFooter() {
         />
       </div>
 
-      <div className="text-xs opacity-70 mt-6">
+      <div className="text-sm opacity-75 mt-6">
         &copy; Copyright Léonard Ganty - {year}
       </div>
-      <div className="text-xs opacity-70">Réalisé par Benjamin Ganty.</div>
+      <div className="text-sm opacity-75">Réalisé par Benjamin Ganty.</div>
     </footer>
   );
 }
