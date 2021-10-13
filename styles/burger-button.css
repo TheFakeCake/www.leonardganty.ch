@@ -23,13 +23,22 @@
 }
 
 .burger-btn:hover {
-  background: var(--burger-btn-hover-bg-color);
+  background-color: var(--burger-btn-hover-bg-color);
 }
 
 .burger-btn:focus {
-  background: var(--burger-btn-focus-bg-color);
+  background-color: var(--burger-btn-focus-bg-color);
   box-shadow: 0 0 0 0.125rem var(--burger-btn-focus-shadow-color);
   outline: 0;
+}
+
+.burger-btn:focus:not(:focus-visible) {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.burger-btn:focus:not(:focus-visible):hover {
+  background-color: var(--burger-btn-hover-bg-color);
 }
 
 .burger-btn .burger-line {

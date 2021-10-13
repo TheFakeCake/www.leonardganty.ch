@@ -97,9 +97,11 @@ function PageHeader() {
                 <Link href={href}>
                   <a
                     className={
-                      'pb-2 border-b-2 hover:text-yellow-200 hover:border-yellow-200 ' +
-                      'focus:outline-none focus:ring-2 focus-not-visible:ring-0 focus-visible:ring-2 ring-yellow-200 ring-offset-4 ring-offset-primary ' +
-                      'focus-visible:transition-shadow lg:border-b-0' +
+                      'pb-2 border-b-2 ring-yellow-200 ring-offset-4 ring-offset-primary transition-colors ' +
+                      'hover:text-yellow-200 hover:border-yellow-200 ' +
+                      'focus:outline-none focus:ring-2 transition ' +
+                      'focus-not-visible:ring-0 ' +
+                      'lg:border-b-0' +
                       (router.asPath === href
                         ? ' font-semibold text-yellow-200 border-yellow-200 lg:font-normal lg:border-b-2 lg:pb-0.5'
                         : ' lg:pb-0')
