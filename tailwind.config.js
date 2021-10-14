@@ -67,6 +67,12 @@ module.exports = {
       inset: {
         '13': '3.25rem',
       },
+      margin: {
+        'footer-wave-height': 'var(--footer-wave-height)',
+      },
+      padding: {
+        'footer-wave-height': 'var(--footer-wave-height)',
+      },
       zIndex: {
         max: '9999',
       },

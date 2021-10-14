@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
+import Button from '../components/Button';
 import ContentSection from '../components/ContentSection';
 import Map from '../components/Map';
 
@@ -16,6 +18,17 @@ export default function Accueil() {
         <meta name="description" content="Page d'accueil" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div className="pt-8 pb-6 text-center">
+        <h1 className="mb-10 text-3xl leading-relaxed">
+          Léonard Ganty
+          <br />
+          <span className="text-4xl">Acupuncture</span>
+        </h1>
+        <Link href="/tarifs-et-rendez-vous" passHref>
+          <Button>Prendre un rendez-vous</Button>
+        </Link>
+      </div>
 
       <ContentSection title="L'acupuncture">
         <p className="mb-2">
@@ -35,8 +48,8 @@ export default function Accueil() {
 
       <ContentSection title="Les prises en charge">
         <p className="mb-2">
-          Je prends en charge des patients dans un cabinet à Plan-les-Ouates,
-          Genève, ainsi qu’à domicile sur demande.
+          Je prends en charge des patients en cabinet (Mouvement et Santé à
+          Plan-les-Ouates, Genève) ainsi qu’à domicile sur demande.
         </p>
         <p className="mb-2">
           En Suisse, les traitements sont pris en charge par les assurances
@@ -51,9 +64,10 @@ export default function Accueil() {
           <abbr className="cursor-help" title="Registre de Médecine Empirique">
             RME
           </abbr>
-          .
+          . Veuillez vérifier auprès de votre assurance complémentaire les
+          prestations et thérapeutes pris en charge.
         </p>
-        <p className="mb-8">Prix des consultations en cabinet : 110 CHF</p>
+        <p className="mb-8">Prix des consultations en cabinet&nbsp;: 110 CHF</p>
         <div>
           <Image
             src={logoASCA}
