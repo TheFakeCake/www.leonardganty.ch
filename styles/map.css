@@ -72,8 +72,6 @@
 
 .ol-control button {
   @apply transition bg-primary bg-opacity-60 ring-primary-dark !important;
-
-  transition-property: background-color box-shadow;
 }
 
 .ol-control button:focus {
@@ -86,8 +84,6 @@
 
 .ol-control button:focus:not(:focus-visible) {
   @apply bg-opacity-60 ring-0 !important;
-
-  transition-property: background-color;
 }
 
 .ol-control button:focus:not(:focus-visible):hover {

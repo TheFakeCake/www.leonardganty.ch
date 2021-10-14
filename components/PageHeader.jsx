@@ -69,7 +69,7 @@ function PageHeader() {
       role="banner"
     >
       <Link href="/">
-        <a className="link self-center rounded-full text-yellow-200 ring-offset-0 hover:opacity-100 lg:hidden">
+        <a className="link self-center rounded-full text-yellow-200 focus:ring-offset-0 hover:opacity-100 lg:hidden">
           <Logo className="w-12 h-12 text-primary-dark border-black bg-gray-50" />
         </a>
       </Link>
@@ -97,14 +97,14 @@ function PageHeader() {
                 <Link href={href}>
                   <a
                     className={
-                      'pb-2 border-b-2 ring-yellow-200 ring-offset-4 ring-offset-primary transition-colors ' +
+                      'pb-2 border-b-2 ring-yellow-200 ring-offset-primary transition ' +
                       'hover:text-yellow-200 hover:border-yellow-200 ' +
-                      'focus:outline-none focus:ring-2 transition ' +
-                      'focus-not-visible:ring-0 ' +
-                      'lg:border-b-0' +
+                      'focus:outline-none focus:ring-2 focus:ring-offset-4 ' +
+                      'focus-not-visible:ring-0 focus-not-visible:ring-offset-0 ' +
+                      'lg:pb-0.5 lg:border-b-0' +
                       (router.asPath === href
-                        ? ' font-semibold text-yellow-200 border-yellow-200 lg:font-normal lg:border-b-2 lg:pb-0.5'
-                        : ' lg:pb-0')
+                        ? ' font-semibold text-yellow-200 border-yellow-200 lg:font-normal lg:border-b-2'
+                        : '')
                     }
                     aria-current={router.asPath === href ? 'page' : false}
                   >
