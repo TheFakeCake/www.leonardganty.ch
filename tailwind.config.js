@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
@@ -15,15 +16,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: [
-          'Lora',
-          'ui-serif',
-          'Georgia',
-          'Cambria',
-          'Times New Roman',
-          'Times',
-          'serif',
-        ],
+        serif: ['Lora', ...defaultTheme.fontFamily.serif],
       },
       keyframes: {
         fadeInFromInvisible: {
