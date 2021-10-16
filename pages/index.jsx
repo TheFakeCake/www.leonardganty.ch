@@ -30,7 +30,7 @@ export default function Accueil() {
         </Link>
       </div>
 
-      <ContentSection title="L'acupuncture">
+      <ContentSection heading="L'acupuncture" headingLevel={2} headingStyle={1}>
         <p className="mb-2">
           La médecine traditionnelle chinoise est une pratique ancestrale
           héritée du Taoïsme. Cette thérapie millénaire s’appuie sur différents
@@ -46,7 +46,11 @@ export default function Accueil() {
         </p>
       </ContentSection>
 
-      <ContentSection title="Les prises en charge">
+      <ContentSection
+        heading="Les prises en charge"
+        headingLevel={2}
+        headingStyle={1}
+      >
         <p className="mb-2">
           Je prends en charge des patients en cabinet (Mouvement et Santé à
           Plan-les-Ouates, Genève) ainsi qu’à domicile sur demande.
@@ -92,7 +96,7 @@ export default function Accueil() {
         </div>
       </ContentSection>
 
-      <ContentSection title="Léonard Ganty">
+      <ContentSection heading="Léonard Ganty" headingLevel={2} headingStyle={1}>
         <p className="mb-2">
           Physiothérapeute de formation, j’ai eu la chance de pratiquer la
           physiothérapie du sport en cabinet et avec des sportifs professionnels
