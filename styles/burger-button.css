@@ -81,7 +81,7 @@
 
 .burger-btn.toggled .burger-line.middle {
   transform: rotate(225deg);
-  opacity: 0;
+  opacity: 0%;
 }
 
 .burger-btn.toggled .burger-line.bottom {
