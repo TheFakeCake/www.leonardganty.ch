@@ -1,6 +1,15 @@
 import PropTypes from 'prop-types';
 
-const styles = {
+const containerStyles = {
+  1: 'mt-6 mb-5 first:mt-0',
+  2: 'mt-5 mb-3 first:mt-0',
+  3: 'mt-4 mb-3 first:mt-0',
+  4: 'my-2 first:mt-0',
+  5: 'my-2 first:mt-0',
+  6: 'my-1 first:mt-0',
+};
+
+const contentStyles = {
   1: 'pb-1 text-3xl leading-normal border-b-2 border-primary',
   2: 'text-2xl leading-normal',
   3: 'text-xl italic',
@@ -9,41 +18,22 @@ const styles = {
   6: 'text-md',
 };
 
-const containers = {
-  1: (className, content) => (
-    <h1 className={'mt-6 mb-5 first:mt-0' + className}>{content}</h1>
-  ),
-  2: (className, content) => (
-    <h2 className={'mt-5 mb-3 first:mt-0' + className}>{content}</h2>
-  ),
-  3: (className, content) => (
-    <h4 className={'mt-4 mb-3 first:mt-0' + className}>{content}</h4>
-  ),
-  4: (className, content) => (
-    <h3 className={'my-2 first:mt-0' + className}>{content}</h3>
-  ),
-  5: (className, content) => (
-    <h5 className={'my-2 first:mt-0' + className}>{content}</h5>
-  ),
-  6: (className, content) => (
-    <h6 className={'my-1 first:mt-0' + className}>{content}</h6>
-  ),
-};
-
 function Heading({ level, stylingLevel, className, children }) {
   if (!stylingLevel) {
     stylingLevel = level;
   }
 
-  const styledContent = (
-    <span className={styles[stylingLevel]}>{children}</span>
+  const Tag = `h${level}`;
+
+  return (
+    <Tag
+      className={
+        containerStyles[stylingLevel] + (className ? ` ${className}` : '')
+      }
+    >
+      <span className={contentStyles[stylingLevel]}>{children}</span>
+    </Tag>
   );
-
-  if (className && className[0] != ' ') {
-    className = ' ' + className;
-  }
-
-  return containers[level](className, styledContent);
 }
 
 Heading.propTypes = {
@@ -55,7 +45,6 @@ Heading.propTypes = {
 
 Heading.defaultProps = {
   level: 1,
-  className: '',
 };
 
 export default Heading;
