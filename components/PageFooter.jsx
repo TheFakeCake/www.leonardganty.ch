@@ -3,9 +3,9 @@ import Image from 'next/image';
 import logoMouvementEtSante from '../public/images/logo-mouvement-et-santé.png';
 import logoASCA from '../public/images/logo-asca.png';
 import logoRME from '../public/images/logo-rme.svg';
+import { emailAddress, isMobile, phoneNumber } from '../app-parameters';
 
 function PageFooter() {
-  const emailAddress = 'therapie' + '@gant' + 'y.ch';
   const year = new Date().getFullYear();
   return (
     <footer className="page-footer">
@@ -15,11 +15,20 @@ function PageFooter() {
         CH-1228 Plan-les-Ouates
       </address>
       <address className="mb-1 not-italic" aria-label="Numéro de téléphone">
-        +41 79 843 74 82
+        {isMobile ? (
+          <a
+            href={`tel:${phoneNumber}`}
+            className="link ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200"
+          >
+            {phoneNumber}
+          </a>
+        ) : (
+          phoneNumber
+        )}
       </address>
       <address className="not-italic" aria-label="Adresse e-mail">
         <a
-          className="link ring-yellow-200 ring-offset-4 ring-offset-primary-dark hover:text-yellow-200"
+          className="link ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200"
           href={'mailto:' + emailAddress}
         >
           {emailAddress}
@@ -27,7 +36,7 @@ function PageFooter() {
       </address>
 
       <a
-        className="link inline-block w-44 mt-6 ring-yellow-200 ring-offset-4 ring-offset-primary-dark hover:scale-105"
+        className="link inline-block w-44 mt-6 ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:scale-105"
         href="https://mouvementetsante.ch/"
       >
         <Image

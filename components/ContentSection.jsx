@@ -18,7 +18,6 @@ function ContentSection({
     >
       {heading && (
         <Heading
-          className="mt-0"
           level={headingLevel}
           stylingLevel={headingStyle}
         >
