@@ -20,10 +20,10 @@ export default function Accueil() {
       </Head>
 
       <div className="pt-8 pb-6 text-center">
-        <h1 className="mb-10 text-3xl leading-relaxed">
+        <h1 className="mb-10 text-4xl leading-relaxed">
           Léonard Ganty
           <br />
-          <span className="text-4xl">Acupuncture</span>
+          <span className="text-5xl">Acupuncture</span>
         </h1>
         <Link href="/tarifs-et-rendez-vous" passHref>
           <Button>Prendre un rendez-vous</Button>
