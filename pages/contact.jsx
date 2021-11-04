@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
@@ -10,50 +12,67 @@ export default function Contact() {
       <ContentRow tag="section">
         <ContentColumn>
           <Heading>Me contacter</Heading>
-          <div className="grid grid-cols-2 gap-x-1.5 gap-y-2">
-            <div className="text-right">Par téléphone&nbsp;:</div>
-            {isMobile ? (
-              <a
-                className="link link-primary text-left"
-                href={`tel:${phoneNumber}`}
-              >
-                {phoneNumber}
+
+          <div className="sm:flex">
+            <div className="mb-4 sm:mb-0 sm:flex-grow">
+              <p className="mb-2">
+                N’hésitez pas à me contacter par téléphone ou par e-mail.
+              </p>
+              <p>
+                Pour tout nouveau rendez-vous, consultez la{' '}
+                <Link href="/tarifs-et-rendez-vous" passHref>
+                  <a className="link link-primary">page dédiée</a>
+                </Link>
+                .
+              </p>
+            </div>
+
+            <div className="text-center sm:min-w-max sm:w-1/3 sm:ml-4 sm:pl-4 sm:border-l sm:border-primary sm:border-opacity-30 sm:text-left">
+              <span className="block font-semibold">Téléphone</span>{' '}
+              {isMobile ? (
+                <a className="link link-primary" href={`tel:${phoneNumber}`}>
+                  {phoneNumber}
+                </a>
+              ) : (
+                phoneNumber
+              )}
+              <span className="block mt-2 font-semibold">E-mail</span>{' '}
+              <a className="link link-primary" href={`mailto:${emailAddress}`}>
+                {emailAddress}
               </a>
-            ) : (
-              <div className="text-left">{phoneNumber}</div>
-            )}
-            <div className="text-right">Par e-mail&nbsp;:</div>
-            <a
-              className="link link-primary text-left"
-              href={`mailto:${emailAddress}`}
-            >
-              {emailAddress}
-            </a>
+            </div>
           </div>
         </ContentColumn>
       </ContentRow>
 
       <ContentRow tag="section">
-        <ContentColumn className="max-w-full">
+        <ContentColumn>
           <Heading>Adresse</Heading>
 
-          <address className="mb-4 text-lg not-italic">
-            Cabinet <em>Mouvement &amp; Santé</em>
-            <br />
-            Route de Saint-Julien 129
-            <br />
-            CH-1228 Plan-les-Ouates
-          </address>
-          <p className="my-2 mx-auto max-w-prose">
-            L&apos;entrée pincipale se trouve du coté de{' '}
-            <em>La&nbsp;Promenade</em>.
-          </p>
-          <p className="my-2 mx-auto max-w-prose">
-            Pour les <strong>personnes à mobilité réduite</strong>, un accès
-            avec une rampe se trouve du côte de la route de Saint-Julien.
-          </p>
+          <div className="max-w-prose sm:flex">
+            <address className="w-max mx-auto mb-4 text-lg not-italic sm:min-w-max sm:mb-0 sm:ml-0 sm:mr-4 sm:pr-4 sm:border-r sm:border-primary sm:border-opacity-30">
+              <strong>Cabinet Mouvement &amp; Santé</strong>
+              <br />
+              Route de Saint-Julien 129
+              <br />
+              CH-1228 Plan-les-Ouates
+            </address>
 
-          {/* <Heading level={2}>Comment venir</Heading>
+            <div className="sm:flex-grow">
+              <p className="mb-2">
+                L&apos;entrée pincipale se trouve du coté de{' '}
+                <em>La&nbsp;Promenade</em>.
+              </p>
+              <p>
+                Pour les <strong>personnes à mobilité réduite</strong>, un accès
+                avec une rampe se trouve du côte de la route de Saint-Julien.
+              </p>
+            </div>
+          </div>
+        </ContentColumn>
+      </ContentRow>
+
+      {/* <Heading level={2}>Comment venir</Heading>
 
           <div className="grid mx-auto max-w-screen-lg grid-cols-1 gap-x-8 gap-y-3 lg:grid-cols-2">
             <div>
@@ -89,9 +108,9 @@ export default function Contact() {
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
         </ContentColumn>
-      </ContentRow>
+      </ContentRow> */}
 
       <Map />
     </>
