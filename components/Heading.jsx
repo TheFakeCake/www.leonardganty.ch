@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const containerStyles = {
-  1: 'mt-6 mb-5 first:mt-0',
+  1: 'mt-6 mb-5 text-center first:mt-0',
   2: 'mt-5 mb-3 first:mt-0',
   3: 'mt-4 mb-3 first:mt-0',
   4: 'my-2 first:mt-0',

@@ -84,7 +84,7 @@ export default function Accueil() {
           <p className="mb-8">
             Prix des consultations en cabinet&nbsp;: 110 CHF
           </p>
-          <div>
+          <div className="text-center">
             <Image
               src={logoASCA}
               alt="Logo de l'ASCA"
