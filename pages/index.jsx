@@ -59,8 +59,9 @@ export default function Accueil() {
             Les prises en charge
           </Heading>
           <p className="my-2">
-            Je prends en charge des patients en cabinet (Mouvement et Santé à
-            Plan-les-Ouates, Genève) ainsi qu’à domicile sur demande.
+            Je prends en charge des patients en cabinet (
+            <em>Mouvement et Santé</em> à Plan-les-Ouates, Genève) ainsi qu’à
+            domicile sur demande.
           </p>
           <p className="my-2">
             En Suisse, les traitements sont pris en charge par les assurances

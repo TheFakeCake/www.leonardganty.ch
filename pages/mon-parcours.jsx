@@ -30,7 +30,7 @@ export default function MonParcours() {
           le champ de mes possibilités de prises en charge. Je peux ainsi
           accompagner des personnes qui souffrent de problématiques pour
           lesquelles je n’ai pas d’outils en tant que physiothérapeute, comme
-          par exemple les insomnies, le stress ou les troubles menstruels.
+          les insomnies, le stress ou les troubles menstruels.
         </p>
 
         <p className="my-2">
