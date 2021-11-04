@@ -43,13 +43,20 @@ export default function Accueil() {
             différents outils tels que les aiguilles, les ventouses, la
             moxibustion ou le massage Tui Na.
           </p>
-          <p>
+          <p className="my-2">
             Qu’elle soit thérapeutique ou préventive, l’acupuncture recherche
             l’équilibre et l’harmonie des énergies du corps. Les séances
             s’adressent à toute population de l’enfance à l’âge adulte pour
             traiter la douleur, insomnies, troubles menstruels, ou stress par
             exemple.
           </p>
+          <div className="mt-3">
+            <Link href="/traitements" passHref>
+              <a className="link link-primary text-lg">
+                En savoir plus sur la médecine traditionnelle chinoise
+              </a>
+            </Link>
+          </div>
         </ContentColumn>
       </ContentRow>
 
@@ -82,9 +89,16 @@ export default function Accueil() {
             . Veuillez vérifier auprès de votre assurance complémentaire les
             prestations et thérapeutes pris en charge.
           </p>
-          <p className="mb-8">
+          <p className="my-2">
             Prix des consultations en cabinet&nbsp;: 110 CHF
           </p>
+          <div className="mt-3 mb-8">
+            <Link href="/tarifs-et-rendez-vous" passHref>
+              <a className="link link-primary text-lg">
+                Prendre un rendez-vous
+              </a>
+            </Link>
+          </div>
           <div className="text-center">
             <Image
               src={logoASCA}
@@ -120,11 +134,18 @@ export default function Accueil() {
             physiothérapie du sport en cabinet et avec des sportifs
             professionnels tel que la relève du Genève-Servette Hockey Club.
           </p>
-          <p className="mb-6">
+          <p className="my-2">
             Aujourd’hui, je continue mon activité aux Hôpitaux Universitaires de
             Genève en plus de ma pratique de l’acupuncture en cabinet et à
             domicile.
           </p>
+          <div className="mt-3 mb-6">
+            <Link href="/mon-parcours" passHref>
+              <a className="link link-primary text-lg">
+                En savoir plus sur mon parcours
+              </a>
+            </Link>
+          </div>
           <div className="max-w-md mx-auto">
             <Image src={photoLeonard} alt="Photo de Léonard Ganty" />
           </div>
