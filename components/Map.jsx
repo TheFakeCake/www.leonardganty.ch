@@ -24,13 +24,15 @@ export default function Map() {
         Carte
       </div>
       <div id="map-description" hidden>
-        Carte de Genève avec un marqueur à l&apos;emplacement du cabinet de
-        Léonard Ganty.
+        Carte de Genève avec un marqueur à l’emplacement du cabinet de Léonard
+        Ganty.
       </div>
       <div className="absolute inset-0 shadow-inner z-10 pointer-events-none"></div>
       <div id="map-popup" className="map-popup">
-        <strong>Mouvement &amp; Santé</strong><br />
-        Route de Saint-Julien 129<br />
+        <strong>Mouvement &amp; Santé</strong>
+        <br />
+        Route de Saint-Julien 129
+        <br />
         1228 Plan-les-Ouates
       </div>
     </div>

@@ -60,7 +60,7 @@ export default function Contact() {
 
             <div className="sm:flex-grow">
               <p className="mb-2">
-                L&apos;entrée pincipale se trouve du coté de{' '}
+                L’entrée pincipale se trouve du coté de{' '}
                 <em>La&nbsp;Promenade</em>.
               </p>
               <p>

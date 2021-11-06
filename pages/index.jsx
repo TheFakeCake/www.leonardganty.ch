@@ -35,7 +35,7 @@ export default function Accueil() {
       <ContentRow tag="section">
         <ContentColumn>
           <Heading level={2} stylingLevel={1}>
-            L&apos;acupuncture
+            L’acupuncture
           </Heading>
           <p className="my-2">
             La médecine traditionnelle chinoise est une pratique ancestrale

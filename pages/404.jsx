@@ -16,10 +16,10 @@ export default function PageNotFound() {
   return (
     <div className={containerClass}>
       <Heading className="mt-0 mb-6">Oops !</Heading>
-      <p className="my-4">Cette page n&apos;existe pas.</p>
+      <p className="my-4">Cette page n’existe pas.</p>
       <Link href="/">
         <a className="link link-primary text-lg">
-          Retour à la page d&apos;accueil
+          Retour à la page d’accueil
         </a>
       </Link>
     </div>
