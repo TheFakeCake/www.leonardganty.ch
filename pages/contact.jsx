@@ -20,7 +20,7 @@ export default function Contact() {
               </p>
               <p>
                 Pour tout nouveau rendez-vous, consultez la{' '}
-                <Link href="/tarifs-et-rendez-vous" passHref>
+                <Link href="/prendre-un-rendez-vous" passHref>
                   <a className="link link-primary">page dédiée</a>
                 </Link>
                 .

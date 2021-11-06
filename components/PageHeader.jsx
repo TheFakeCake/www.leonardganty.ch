@@ -9,7 +9,7 @@ const navItems = [
   { href: '/', label: 'Accueil' },
   { href: '/traitements', label: 'Traitements' },
   { href: '/mon-parcours', label: 'Mon parcours' },
-  { href: '/tarifs-et-rendez-vous', label: 'Tarifs et rendez-vous' },
+  { href: '/prendre-un-rendez-vous', label: 'Prendre un rendez-vous' },
   { href: '/contact', label: 'Contact' },
 ];
 

@@ -27,7 +27,7 @@ export default function Accueil() {
           <br />
           <span className="text-5xl">Acupuncture</span>
         </h1>
-        <Link href="/tarifs-et-rendez-vous" passHref>
+        <Link href="/prendre-un-rendez-vous" passHref>
           <Button>Prendre un rendez-vous</Button>
         </Link>
       </div>
@@ -93,7 +93,7 @@ export default function Accueil() {
             Prix des consultations en cabinet&nbsp;: 110 CHF
           </p>
           <div className="mt-3 mb-8">
-            <Link href="/tarifs-et-rendez-vous" passHref>
+            <Link href="/prendre-un-rendez-vous" passHref>
               <a className="link link-primary text-lg">
                 Prendre un rendez-vous
               </a>
