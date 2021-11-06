@@ -59,10 +59,10 @@ export default function Traitements() {
               },
             ].map(({ dt, dd }, index) => {
               return [
-                <dt className="font-semibold" key={index}>
+                <dt className="font-semibold" key={`dt-${index}`}>
                   {dt}
                 </dt>,
-                <dd className="ml-4 mb-2 last:mb-0" key={index}>
+                <dd className="ml-4 mb-2 last:mb-0" key={`dd-${index}`}>
                   {dd}
                 </dd>,
               ];
