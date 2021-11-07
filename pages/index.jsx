@@ -18,9 +18,11 @@ export default function Accueil() {
   return (
     <>
       <Head>
-        <title>Accueil</title>
-        <meta name="description" content="Page d'accueil" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Léonard Ganty - Acupuncture à Plan-les-Ouates, Genève</title>
+        <meta
+          name="description"
+          content="Léonard Ganty vous accueil sur rendez-vous à Plan-les-Ouates pour des séances d’acupuncture et autres traitements de médecine traditionnelle chinoise."
+        />
       </Head>
 
       <div className="grid">
@@ -55,7 +57,6 @@ export default function Accueil() {
           />
         </div>
       </div>
-
       <ContentRow tag="section">
         <ContentColumn>
           <Heading level={2} stylingLevel={1}>
@@ -83,7 +84,6 @@ export default function Accueil() {
           </div>
         </ContentColumn>
       </ContentRow>
-
       <ContentRow tag="section">
         <ContentColumn>
           <Heading level={2} stylingLevel={1}>
@@ -147,7 +147,6 @@ export default function Accueil() {
           </div>
         </ContentColumn>
       </ContentRow>
-
       <ContentRow tag="section">
         <ContentColumn>
           <Heading level={2} stylingLevel={1}>
@@ -175,7 +174,6 @@ export default function Accueil() {
           </div>
         </ContentColumn>
       </ContentRow>
-
       <Map />
     </>
   );
