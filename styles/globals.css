@@ -51,3 +51,111 @@
     @apply text-primary-dark ring-primary-dark;
   }
 }
+
+@layer utilities {
+  @variants responsive, hover {
+    .text-shadow-sm {
+      text-shadow:
+        rgba(var(--text-shadow-color, 0 0 0) / var(--text-shadow-opacity, 50%))
+        calc(1px * var(--text-shadow-x-mod, 1))
+        calc(1px * var(--text-shadow-y-mod, 1))
+        var(--text-shadow-blur, 2px);
+    }
+
+    .text-shadow {
+      text-shadow:
+        rgba(var(--text-shadow-color, 0 0 0) / var(--text-shadow-opacity, 50%))
+        calc(2px * var(--text-shadow-x-mod, 1))
+        calc(2px * var(--text-shadow-y-mod, 1))
+        var(--text-shadow-blur, 2px);
+    }
+
+    .text-shadow-lg {
+      text-shadow:
+        rgba(var(--text-shadow-color, 0 0 0) / var(--text-shadow-opacity, 50%))
+        calc(3px * var(--text-shadow-x-mod, 1/3))
+        calc(3px * var(--text-shadow-y-mod, 1))
+        var(--text-shadow-blur, 3px);
+    }
+
+    .text-shadow-xl {
+      text-shadow:
+        rgba(var(--text-shadow-color, 0 0 0) / var(--text-shadow-opacity, 50%))
+        calc(4px * var(--text-shadow-x-mod, 0.75))
+        calc(4px * var(--text-shadow-y-mod, 1))
+        var(--text-shadow-blur, 5px);
+    }
+
+    .text-shadow-solid {
+      --text-shadow-blur: 0;
+    }
+
+    .text-shadow-smooth {
+      --text-shadow-blur: 3px;
+    }
+
+    .text-shadow-blurry {
+      --text-shadow-blur: 6px;
+    }
+
+    .text-shadow-top {
+      --text-shadow-x-mod: 0;
+      --text-shadow-y-mod: -1;
+    }
+
+    .text-shadow-bottom {
+      --text-shadow-x-mod: 0;
+      --text-shadow-y-mod: 1;
+    }
+
+    .text-shadow-left {
+      --text-shadow-x-mod: -1;
+      --text-shadow-y-mod: 0;
+    }
+
+    .text-shadow-right {
+      --text-shadow-x-mod: 1;
+      --text-shadow-y-mod: 0;
+    }
+
+    .text-shadow-top-left {
+      --text-shadow-x-mod: -1;
+      --text-shadow-y-mod: -1;
+    }
+
+    .text-shadow-top-right {
+      --text-shadow-x-mod: 1;
+      --text-shadow-y-mod: -1;
+    }
+
+    .text-shadow-bottom-left {
+      --text-shadow-x-mod: -1;
+      --text-shadow-y-mod: 1;
+    }
+
+    .text-shadow-bottom-right {
+      --text-shadow-x-mod: 1;
+      --text-shadow-y-mod: 1;
+    }
+
+    .text-shadow-center {
+      --text-shadow-x-mod: 0;
+      --text-shadow-y-mod: 0;
+    }
+
+    .text-shadow-opacity-100 { --text-shadow-opacity: 100%; }
+    .text-shadow-opacity-90 { --text-shadow-opacity: 90%; }
+    .text-shadow-opacity-80 { --text-shadow-opacity: 80%; }
+    .text-shadow-opacity-70 { --text-shadow-opacity: 70%; }
+    .text-shadow-opacity-60 { --text-shadow-opacity: 60%; }
+    .text-shadow-opacity-50 { --text-shadow-opacity: 50%; }
+    .text-shadow-opacity-40 { --text-shadow-opacity: 40%; }
+    .text-shadow-opacity-30 { --text-shadow-opacity: 30%; }
+    .text-shadow-opacity-20 { --text-shadow-opacity: 20%; }
+    .text-shadow-opacity-10 { --text-shadow-opacity: 10%; }
+
+    .text-shadow-none {
+      text-shadow: none;
+    }
+  }
+}
