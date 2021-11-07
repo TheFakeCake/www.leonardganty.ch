@@ -11,6 +11,8 @@ import Map from '../components/Map';
 import logoASCA from '../public/images/logo-asca.png';
 import logoRME from '../public/images/logo-rme.svg';
 import photoLeonard from '../public/images/photo-leonard-ganty.jpg';
+import titleImage from '../public/images/manuscrits-dynastie-qing.jpg';
+import titleImageMobile from '../public/images/manuscrits-dynastie-qing-mobile.jpg';
 
 export default function Accueil() {
   return (
@@ -21,15 +23,37 @@ export default function Accueil() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="pt-8 pb-6 text-center">
-        <h1 className="mb-10 text-4xl leading-relaxed">
-          Léonard Ganty
-          <br />
-          <span className="text-5xl">Acupuncture</span>
-        </h1>
-        <Link href="/prendre-un-rendez-vous" passHref>
-          <Button>Prendre un rendez-vous</Button>
-        </Link>
+      <div className="grid">
+        <div className="col-span-full row-span-full z-10 py-6 text-center bg-black bg-opacity-20 lg:py-20">
+          <h1 className="mb-10 text-4xl leading-relaxed text-white text-shadow-xl text-shadow-blurry text-shadow-opacity-100 lg:mb-16">
+            Léonard Ganty
+            <br />
+            <span className="text-5xl">Acupuncture</span>
+          </h1>
+          <Link href="/prendre-un-rendez-vous" passHref>
+            <Button>Prendre un rendez-vous</Button>
+          </Link>
+        </div>
+        <div className="col-span-full row-span-full relative md:hidden">
+          <Image
+            className="select-none"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top right"
+            src={titleImageMobile}
+            alt="Photo de manuscrits de médecine chinoise"
+          />
+        </div>
+        <div className="col-span-full row-span-full relative hidden md:block">
+          <Image
+            className="select-none"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top right"
+            src={titleImage}
+            alt="Photo de manuscrits de médecine chinoise"
+          />
+        </div>
       </div>
 
       <ContentRow tag="section">
