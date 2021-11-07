@@ -102,11 +102,11 @@ function PageHeader() {
                       'focus:outline-none focus:ring-2 focus:ring-offset-4 ' +
                       'focus-not-visible:ring-0 focus-not-visible:ring-offset-0 ' +
                       'lg:pb-0.5 lg:border-b-0' +
-                      (router.asPath === href
+                      (router.pathname === href
                         ? ' font-semibold text-yellow-200 border-yellow-200 lg:font-normal lg:border-b-2'
                         : '')
                     }
-                    aria-current={router.asPath === href ? 'page' : false}
+                    aria-current={router.pathname === href ? 'page' : false}
                   >
                     {label}
                   </a>
