@@ -1,19 +1,15 @@
-import Head from 'next/head';
-
 import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
+import SEO from '../components/SEO';
 
 export default function Traitements() {
   return (
     <>
-      <Head>
-        <title>Les traitements d’acupuncture que Léonard Ganty pratique</title>
-        <meta
-          name="description"
-          content="La médecine traditionnelle chinoise comprend de nombreuses techniques, dont l’acupuncture, pour traiter autant de maux et problèmes."
-        />
-      </Head>
+      <SEO
+        title="Les traitements d’acupuncture pratiqués par Léonard Ganty"
+        description="La médecine traditionnelle chinoise comprend de nombreuses techniques, dont l’acupuncture, pour traiter autant de maux et problèmes."
+      />
 
       <ContentRow tag="section">
         <ContentColumn>

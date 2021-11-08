@@ -1,22 +1,16 @@
-import Head from 'next/head';
-
 import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
 import Quotation from '../components/Quotation';
+import SEO from '../components/SEO';
 
 export default function MonParcours() {
   return (
     <>
-      <Head>
-        <title>
-          Le parcours et les formations d’acupuncteur de Léonard Ganty
-        </title>
-        <meta
-          name="description"
-          content="Léonard Ganty a effectué sa formation d’acupuncture à Genève en parallèle de sa pratique de physiothérapeute."
-        />
-      </Head>
+      <SEO
+        title="Le parcours et les formations d’acupuncteur de Léonard Ganty"
+        description="Léonard Ganty a effectué sa formation d’acupuncture à Genève en parallèle de sa pratique de physiothérapeute."
+      />
 
       <ContentRow tag="section">
         <ContentColumn>

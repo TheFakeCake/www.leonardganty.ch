@@ -1,22 +1,19 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
 import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
 import Map from '../components/Map';
+import SEO from '../components/SEO';
 import { emailAddress, isMobile, phoneNumber } from '../app-parameters';
 
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Contacter Léonard Ganty - Acupuncture</title>
-        <meta
-          name="description"
-          content="Le numéro de téléphone de Léonard Ganty et l’adresse du cabinet où il pratique l’acupuncture."
-        />
-      </Head>
+      <SEO
+        title="Contacter Léonard Ganty - Acupuncture"
+        description="Le numéro de téléphone de Léonard Ganty et l’adresse du cabinet où il pratique l’acupuncture."
+      />
 
       <ContentRow tag="section">
         <ContentColumn>

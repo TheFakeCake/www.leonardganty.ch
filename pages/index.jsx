@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,6 +6,7 @@ import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
 import Map from '../components/Map';
+import SEO from '../components/SEO';
 
 import logoASCA from '../public/images/logo-asca.png';
 import logoRME from '../public/images/logo-rme.svg';
@@ -17,13 +17,10 @@ import titleImageMobile from '../public/images/manuscrits-dynastie-qing-mobile.j
 export default function Accueil() {
   return (
     <>
-      <Head>
-        <title>Léonard Ganty - Acupuncture à Plan-les-Ouates, Genève</title>
-        <meta
-          name="description"
-          content="Léonard Ganty vous accueil sur rendez-vous à Plan-les-Ouates pour des séances d’acupuncture et autres traitements de médecine traditionnelle chinoise."
-        />
-      </Head>
+      <SEO
+        title="Léonard Ganty - Acupuncture à Plan-les-Ouates, Genève"
+        description="Léonard Ganty vous accueil sur rendez-vous à Plan-les-Ouates pour des séances d’acupuncture et autres traitements de médecine traditionnelle chinoise."
+      />
 
       <div className="grid">
         <div className="col-span-full row-span-full z-10 py-6 text-center bg-black bg-opacity-20 lg:py-20">
