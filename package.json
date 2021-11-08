@@ -11,6 +11,7 @@
     "css-lint": "stylelint styles/**/*.css"
   },
   "dependencies": {
+    "focus-trap-react": "^8.8.2",
     "next": "^12.0.0",
     "next-transpile-modules": "^9.0.0",
     "ol": "^6.6.1",
