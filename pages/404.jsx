@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 
 import Heading from '../components/Heading';
@@ -14,14 +15,20 @@ const containerClass = `
 
 export default function PageNotFound() {
   return (
-    <div className={containerClass}>
-      <Heading className="mt-0 mb-6">Oops !</Heading>
-      <p className="my-4">Cette page n’existe pas.</p>
-      <Link href="/">
-        <a className="link link-primary text-lg">
-          Retour à la page d’accueil
-        </a>
-      </Link>
-    </div>
+    <>
+      <Head>
+        <title>Oops ! Cette page n’existe pas</title>
+      </Head>
+
+      <div className={containerClass}>
+        <Heading>Oops !</Heading>
+        <p className="my-4">Cette page n’existe pas.</p>
+        <Link href="/">
+          <a className="link link-primary text-lg">
+            Retour à la page d’accueil
+          </a>
+        </Link>
+      </div>
+    </>
   );
 }
