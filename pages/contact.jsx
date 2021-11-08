@@ -4,8 +4,9 @@ import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
 import Map from '../components/Map';
+import PhoneNumber from '../components/PhoneNumber';
 import SEO from '../components/SEO';
-import { emailAddress, isMobile, phoneNumber } from '../app-parameters';
+import { emailAddress } from '../app-parameters';
 
 export default function Contact() {
   return (
@@ -35,13 +36,7 @@ export default function Contact() {
 
             <div className="text-center sm:min-w-max sm:w-1/3 sm:ml-4 sm:pl-4 sm:border-l sm:border-primary sm:border-opacity-30 sm:text-left">
               <span className="block font-semibold">Téléphone</span>{' '}
-              {isMobile ? (
-                <a className="link link-primary" href={`tel:${phoneNumber}`}>
-                  {phoneNumber}
-                </a>
-              ) : (
-                phoneNumber
-              )}
+              <PhoneNumber linkClassName="link link-primary" />
               <span className="block mt-2 font-semibold">E-mail</span>{' '}
               <a className="link link-primary" href={`mailto:${emailAddress}`}>
                 {emailAddress}

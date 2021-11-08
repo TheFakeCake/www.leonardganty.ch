@@ -1,9 +1,11 @@
 import Image from 'next/image';
 
+import PhoneNumber from './PhoneNumber';
+
 import logoMouvementEtSante from '../public/images/logo-mouvement-et-santé.png';
 import logoASCA from '../public/images/logo-asca.png';
 import logoRME from '../public/images/logo-rme.svg';
-import { emailAddress, isMobile, phoneNumber } from '../app-parameters';
+import { emailAddress } from '../app-parameters';
 
 function PageFooter() {
   const year = new Date().getFullYear();
@@ -15,16 +17,7 @@ function PageFooter() {
         CH-1228 Plan-les-Ouates
       </address>
       <address className="mb-1 not-italic" aria-label="Numéro de téléphone">
-        {isMobile ? (
-          <a
-            href={`tel:${phoneNumber}`}
-            className="link ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200"
-          >
-            {phoneNumber}
-          </a>
-        ) : (
-          phoneNumber
-        )}
+        <PhoneNumber linkClassName="link ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200" />
       </address>
       <address className="not-italic" aria-label="Adresse e-mail">
         <a
