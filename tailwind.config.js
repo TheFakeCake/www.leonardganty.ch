@@ -49,6 +49,7 @@ module.exports = {
           DEFAULT: colors.red['800'],
           dark: '#810e11',
         },
+        tapHighlight: 'rgba(129 14 17 / 20%)',
       },
       height: {
         112: '28rem',
