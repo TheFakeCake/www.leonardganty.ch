@@ -16,12 +16,12 @@ function PageFooter() {
         <br />
         CH-1228 Plan-les-Ouates
       </address>
-      <address className="mb-1 not-italic" aria-label="Numéro de téléphone">
-        <PhoneNumber linkClassName="link ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200" />
+      <address className="my-2 not-italic" aria-label="Numéro de téléphone">
+        <PhoneNumber linkClassName="link text-lg ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200" />
       </address>
       <address className="not-italic" aria-label="Adresse e-mail">
         <a
-          className="link ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200"
+          className="link text-lg ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200"
           href={'mailto:' + emailAddress}
         >
           {emailAddress}

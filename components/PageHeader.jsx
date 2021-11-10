@@ -87,7 +87,7 @@ function PageHeader() {
         role="banner"
       >
         <Link href="/">
-          <a className="link self-center rounded-full text-yellow-200 focus:ring-offset-0 hover:opacity-100 lg:hidden">
+          <a className="link self-center rounded-full text-yellow-200 focus:ring-offset-0 hover:opacity-100 lg:hidden" aria-label="Page d'accueil">
             <Logo className="w-12 h-12 text-primary-dark border-black bg-gray-50" />
           </a>
         </Link>
