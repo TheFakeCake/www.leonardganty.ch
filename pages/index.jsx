@@ -14,19 +14,6 @@ import photoLeonard from '../public/images/photo-leonard-ganty.jpg';
 import titleImage from '../public/images/manuscrits-dynastie-qing.jpg';
 import titleImageMobile from '../public/images/manuscrits-dynastie-qing-mobile.jpg';
 
-function responsiveLoader({ src, width, quality }) {
-  if (width > 768) {
-    if (src.match(/-mobile/)) {
-      return 'about:blank';
-    }
-  } else if (!src.match(/-mobile/)) {
-    return 'about:blank';
-  }
-  return `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${
-    quality || 75
-  }`;
-}
-
 export default function Accueil() {
   return (
     <>
@@ -54,8 +41,6 @@ export default function Accueil() {
             objectPosition="top right"
             src={titleImageMobile}
             alt="Photo de manuscrits de médecine chinoise"
-            loader={responsiveLoader}
-            priority
           />
         </div>
         <div className="col-span-full row-span-full relative hidden md:block">
@@ -66,8 +51,6 @@ export default function Accueil() {
             objectPosition="top right"
             src={titleImage}
             alt="Photo de manuscrits de médecine chinoise"
-            loader={responsiveLoader}
-            priority
           />
         </div>
       </div>
