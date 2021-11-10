@@ -102,7 +102,7 @@ function PageHeader() {
 
         <nav
           className={
-            'fixed top-16 bottom-0 left-0 right-0 pt-10 pr-4 bg-primary ' +
+            'fixed top-16 bottom-0 left-0 right-0 pt-10 pr-4 bg-primary overflow-y-auto ' +
             'lg:static lg:pr-0 lg:pt-0 lg:w-full lg:max-w-2xl lg:visible lg:opacity-100 lg:animate-none ' +
             navVisibleClass
           }
