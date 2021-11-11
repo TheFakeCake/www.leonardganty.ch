@@ -14,6 +14,10 @@ import photoLeonard from '../public/images/photo-leonard-ganty.jpg';
 import titleImage from '../public/images/manuscrits-dynastie-qing.jpg';
 import titleImageMobile from '../public/images/manuscrits-dynastie-qing-mobile.jpg';
 
+function nextOptimzedImageUrl(src, width, quality = 75) {
+  return `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
+}
+
 export default function Accueil() {
   return (
     <>
@@ -33,26 +37,37 @@ export default function Accueil() {
             <Button>Prendre un rendez-vous</Button>
           </Link>
         </div>
-        <div className="col-span-full row-span-full relative md:hidden">
-          <Image
-            className="select-none"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top right"
-            src={titleImageMobile}
+        <picture className="col-span-full row-span-full">
+          <source
+            srcSet={nextOptimzedImageUrl(titleImageMobile.src, 640)}
+            media="(min-width: 385px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImage.src, 828)}
+            media="(min-width: 768px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImage.src, 1080)}
+            media="(min-width: 829px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImage.src, 1200)}
+            media="(min-width: 1081px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImage.src, 1920)}
+            media="(min-width: 1201px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImage.src, 2048)}
+            media="(min-width: 1921px)"
+          />
+          <img
+            className="w-full h-full object-cover object-right-top md:object-center"
+            src={nextOptimzedImageUrl(titleImageMobile.src, 384)}
             alt="Photo de manuscrits de médecine chinoise"
           />
-        </div>
-        <div className="col-span-full row-span-full relative hidden md:block">
-          <Image
-            className="select-none"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top right"
-            src={titleImage}
-            alt="Photo de manuscrits de médecine chinoise"
-          />
-        </div>
+        </picture>
       </div>
       <ContentRow tag="section">
         <ContentColumn>
