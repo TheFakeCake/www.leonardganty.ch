@@ -108,7 +108,7 @@ function PageHeader() {
           }
           id="mainNav"
         >
-          <ul className="flex flex-col text-3xl leading-relaxed lg:h-full lg:flex-row lg:justify-between lg:items-center lg:text-lg">
+          <ul className="flex flex-col text-2xl leading-relaxed lg:h-full lg:flex-row lg:justify-between lg:items-center lg:text-lg">
             {navItems.map(({ href, label }) => {
               return (
                 <li className="mb-6 text-right lg:mb-0 lg:-mt-1.5" key={href}>
