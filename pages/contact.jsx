@@ -1,12 +1,14 @@
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
-import Map from '../components/Map';
 import PhoneNumber from '../components/PhoneNumber';
 import SEO from '../components/SEO';
 import { emailAddress } from '../app-parameters';
+
+const Map = dynamic(() => import('../components/Map'));
 
 export default function Contact() {
   return (
