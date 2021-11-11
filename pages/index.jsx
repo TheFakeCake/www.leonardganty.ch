@@ -26,8 +26,8 @@ export default function Accueil() {
         description="Léonard Ganty vous accueil sur rendez-vous à Plan-les-Ouates pour des séances d’acupuncture et autres traitements de médecine traditionnelle chinoise."
       />
 
-      <div className="grid">
-        <div className="col-span-full row-span-full z-10 py-6 text-center bg-black bg-opacity-20 lg:py-20">
+      <div className="relative isolate">
+        <div className="py-6 text-center bg-black bg-opacity-20 lg:py-20">
           <h1 className="mb-10 text-4xl leading-relaxed text-white text-shadow-xl text-shadow-blurry text-shadow-opacity-100 lg:mb-16">
             Léonard Ganty
             <br />
@@ -37,30 +37,30 @@ export default function Accueil() {
             <Button>Prendre un rendez-vous</Button>
           </Link>
         </div>
-        <picture className="col-span-full row-span-full">
+        <picture className="absolute inset-0 z-[-1]">
           <source
-            srcSet={nextOptimzedImageUrl(titleImageMobile.src, 640)}
-            media="(min-width: 385px)"
-          />
-          <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 828)}
-            media="(min-width: 768px)"
-          />
-          <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 1080)}
-            media="(min-width: 829px)"
-          />
-          <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 1200)}
-            media="(min-width: 1081px)"
+            srcSet={nextOptimzedImageUrl(titleImage.src, 2048)}
+            media="(min-width: 1921px)"
           />
           <source
             srcSet={nextOptimzedImageUrl(titleImage.src, 1920)}
             media="(min-width: 1201px)"
           />
           <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 2048)}
-            media="(min-width: 1921px)"
+            srcSet={nextOptimzedImageUrl(titleImage.src, 1200)}
+            media="(min-width: 1081px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImage.src, 1080)}
+            media="(min-width: 829px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImage.src, 828)}
+            media="(min-width: 768px)"
+          />
+          <source
+            srcSet={nextOptimzedImageUrl(titleImageMobile.src, 640)}
+            media="(min-width: 385px)"
           />
           <img
             className="w-full h-full object-cover object-right-top md:object-center"
