@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -6,6 +5,7 @@ import Button from '../components/Button';
 import ContentColumn from '../components/layout/ContentColumn';
 import ContentRow from '../components/layout/ContentRow';
 import Heading from '../components/Heading';
+import Map from '../components/Map';
 import SEO from '../components/SEO';
 
 import logoASCA from '../public/images/logo-asca.png';
@@ -13,8 +13,6 @@ import logoRME from '../public/images/logo-rme.svg';
 import photoLeonard from '../public/images/photo-leonard-ganty.jpg';
 import titleImage from '../public/images/manuscrits-dynastie-qing.jpg';
 import titleImageMobile from '../public/images/manuscrits-dynastie-qing-mobile.jpg';
-
-const Map = dynamic(() => import('../components/Map'));
 
 export default function Accueil() {
   return (

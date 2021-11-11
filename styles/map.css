@@ -1,7 +1,7 @@
 /* Map popup */
 
 .map-popup {
-  @apply absolute -translate-x-1/2 w-max px-3 py-2 rounded drop-shadow-md bg-gray-50;
+  @apply absolute -left-full -translate-x-1/2 w-max px-3 py-2 rounded drop-shadow-md bg-gray-50;
 
   filter: var(--tw-drop-shadow); /* work around fix */
   bottom: calc(100% + 8px);
