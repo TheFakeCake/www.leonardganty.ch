@@ -57,9 +57,10 @@ export default function Map() {
 
   return (
     <div
-      className="relative h-128 lg:h-128"
+      className="group relative h-128 focus:outline-none lg:h-128"
       aria-labelledby="map-label"
       aria-describedby="map-description"
+      tabIndex="0"
       ref={rootRef}
     >
       <div id="map-label" hidden>
@@ -69,7 +70,7 @@ export default function Map() {
         Carte de Genève avec un marqueur à l’emplacement du cabinet de Léonard
         Ganty.
       </div>
-      <div className="absolute inset-0 shadow-inner z-10 pointer-events-none"></div>
+      <div className="absolute inset-0 shadow-inner z-10 pointer-events-none group-focus-visible:ring-2 group-focus-visible:ring-primary group-focus-visible:ring-inset"></div>
       <div id="map-popup" className="map-popup">
         <strong>Mouvement &amp; Santé</strong>
         <br />
