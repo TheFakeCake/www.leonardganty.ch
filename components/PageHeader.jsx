@@ -102,8 +102,8 @@ function PageHeader() {
 
         <nav
           className={
-            'fixed top-16 bottom-0 left-0 right-0 pt-10 pr-4 bg-primary overflow-y-auto ' +
-            'lg:static lg:pr-0 lg:pt-0 lg:w-full lg:max-w-2xl lg:visible lg:opacity-100 lg:animate-none ' +
+            'fixed top-16 bottom-0 left-0 right-0 pt-8 pr-4 bg-primary overflow-y-auto ' +
+            'lg:static lg:pr-0 lg:pt-0 lg:w-full lg:max-w-2xl lg:visible lg:opacity-100 lg:animate-none lg:overflow-visible ' +
             navVisibleClass
           }
           id="mainNav"
@@ -111,7 +111,7 @@ function PageHeader() {
           <ul className="flex flex-col text-2xl leading-relaxed lg:h-full lg:flex-row lg:justify-between lg:items-center lg:text-lg">
             {navItems.map(({ href, label }) => {
               return (
-                <li className="mb-6 text-right lg:mb-0 lg:-mt-1.5" key={href}>
+                <li className="mb-5 text-right last:mb-3 lg:mb-0 lg:last:mb-0 lg:-mt-1.5" key={href}>
                   <Link href={href}>
                     <a
                       className={
