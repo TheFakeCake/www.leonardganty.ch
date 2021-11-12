@@ -84,7 +84,7 @@ export default function Accueil() {
             Qu’elle soit thérapeutique ou préventive, l’acupuncture recherche
             l’équilibre et l’harmonie des énergies du corps. Les séances
             s’adressent à toute population de l’enfance à l’âge adulte pour
-            traiter la douleur, insomnies, troubles menstruels, ou stress par
+            traiter douleurs, insomnies, troubles menstruels, ou le stress par
             exemple.
           </p>
           <div className="mt-3">
@@ -148,7 +148,7 @@ export default function Accueil() {
             />
             <Image
               src={logoRME}
-              alt="Logo de du RME"
+              alt="Logo du RME"
               title="Registre de Médecine Empirique"
               className="inline-block"
               width={100}
