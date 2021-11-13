@@ -7,6 +7,10 @@
     --footer-wave-height: calc(100vw / 45 * 1.1);
   }
 
+  html {
+    scroll-padding-top: 4.5rem;
+  }
+
   body {
     -webkit-tap-highlight-color: theme('colors.tapHighlight');
   }
