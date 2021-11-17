@@ -11,6 +11,12 @@
     scroll-padding-top: 4.5rem;
   }
 
+  @screen lg {
+    html {
+      scroll-padding-top: 6rem;
+    }
+  }
+
   body {
     -webkit-tap-highlight-color: theme('colors.tapHighlight');
   }
