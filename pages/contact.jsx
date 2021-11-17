@@ -17,11 +17,11 @@ export default function Contact() {
       />
 
       <ContentRow tag="section">
-        <ContentColumn>
+        <ContentColumn className="max-w-screen-md">
           <Heading>Me contacter</Heading>
 
-          <div className="sm:flex">
-            <div className="mb-4 sm:mb-0 sm:flex-grow">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-[auto,18rem]">
+            <div>
               <p className="mb-2">
                 N’hésitez pas à me contacter par téléphone ou par e-mail.
               </p>
@@ -34,7 +34,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="text-center sm:min-w-max sm:w-1/3 sm:ml-4 sm:pl-4 sm:border-l sm:border-primary sm:border-opacity-30 sm:text-left">
+            <div className="text-center text-lg sm:pl-4 sm:border-l sm:border-primary sm:border-opacity-30 sm:text-left">
               <span className="block font-semibold">Téléphone</span>{' '}
               <PhoneNumber linkClassName="link link-primary" />
               <span className="block mt-2 font-semibold">E-mail</span>{' '}
@@ -47,11 +47,11 @@ export default function Contact() {
       </ContentRow>
 
       <ContentRow tag="section">
-        <ContentColumn>
+        <ContentColumn className="max-w-screen-md">
           <Heading>Adresse</Heading>
 
-          <div className="max-w-prose sm:flex">
-            <address className="w-max mx-auto mb-4 text-lg not-italic sm:min-w-max sm:mb-0 sm:ml-0 sm:mr-4 sm:pr-4 sm:border-r sm:border-primary sm:border-opacity-30">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-[auto,18rem]">
+            <address className="mx-auto text-lg not-italic sm:order-2 sm:mx-0 sm:pl-4 sm:border-l sm:border-primary sm:border-opacity-30">
               <strong>Cabinet Mouvement &amp; Santé</strong>
               <br />
               Route de Saint-Julien 129
@@ -59,7 +59,7 @@ export default function Contact() {
               CH-1228 Plan-les-Ouates
             </address>
 
-            <div className="sm:flex-grow">
+            <div>
               <p className="mb-2">
                 L’entrée pincipale se trouve du coté de{' '}
                 <em>La&nbsp;Promenade</em>.
