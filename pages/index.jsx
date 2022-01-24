@@ -126,7 +126,7 @@ export default function Accueil() {
             prestations et thérapeutes pris en charge.
           </p>
           <p className="my-2">
-            Prix des consultations en cabinet&nbsp;: 110 CHF
+            Prix des consultations en cabinet&nbsp;: 120 CHF
           </p>
           <div className="mt-3 mb-8">
             <Link href="/prendre-un-rendez-vous" passHref>
