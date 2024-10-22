@@ -86,10 +86,8 @@ function PageHeader() {
         className="fixed top-0 flex justify-between w-full h-16 px-4 py-1 text-gray-100 shadow-md z-max bg-primary lg:justify-center"
         role="banner"
       >
-        <Link href="/">
-          <a className="link self-center rounded-full text-yellow-200 focus:ring-offset-0 hover:opacity-100 lg:hidden" aria-label="Page d'accueil">
-            <Logo className="w-12 h-12 text-primary-dark border-black bg-gray-50" />
-          </a>
+        <Link href="/" className="link self-center rounded-full text-yellow-200 focus:ring-offset-0 hover:opacity-100 lg:hidden" aria-label="Page d'accueil">
+          <Logo className="w-12 h-12 text-primary-dark border-black bg-gray-50" />
         </Link>
 
         <BurgerButton
@@ -112,22 +110,20 @@ function PageHeader() {
             {navItems.map(({ href, label }) => {
               return (
                 <li className="mb-5 text-right last:mb-3 lg:mb-0 lg:last:mb-0 lg:-mt-1.5" key={href}>
-                  <Link href={href}>
-                    <a
-                      className={
-                        'pb-2 border-b-2 ring-yellow-200 ring-offset-primary transition ' +
-                        'hover:text-yellow-200 hover:border-yellow-200 ' +
-                        'focus:outline-none focus:ring-2 focus:ring-offset-4 ' +
-                        'focus-not-visible:ring-0 focus-not-visible:ring-offset-0 ' +
-                        'lg:pb-0.5 lg:border-b-0' +
-                        (router.pathname === href
-                          ? ' font-semibold text-yellow-200 border-yellow-200 lg:font-normal lg:border-b-2'
-                          : '')
-                      }
-                      aria-current={router.pathname === href ? 'page' : false}
-                    >
-                      {label}
-                    </a>
+                  <Link
+                    href={href}
+                    className={
+                      'pb-2 border-b-2 ring-yellow-200 ring-offset-primary transition ' +
+                      'hover:text-yellow-200 hover:border-yellow-200 ' +
+                      'focus:outline-none focus:ring-2 focus:ring-offset-4 ' +
+                      'focus-not-visible:ring-0 focus-not-visible:ring-offset-0 ' +
+                      'lg:pb-0.5 lg:border-b-0' +
+                      (router.pathname === href
+                        ? ' font-semibold text-yellow-200 border-yellow-200 lg:font-normal lg:border-b-2'
+                        : '')
+                    }
+                    aria-current={router.pathname === href ? 'page' : false}>
+                    {label}
                   </Link>
                 </li>
               );

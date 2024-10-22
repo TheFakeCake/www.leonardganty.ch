@@ -19,14 +19,11 @@ export default function PageNotFound() {
       <Head>
         <title>Oops ! Cette page n’existe pas</title>
       </Head>
-
       <div className={containerClass}>
         <Heading>Oops !</Heading>
         <p className="my-4">Cette page n’existe pas.</p>
-        <Link href="/">
-          <a className="link link-primary text-lg">
-            Retour à la page d’accueil
-          </a>
+        <Link href="/" className="link link-primary text-lg">
+          Retour à la page d’accueil
         </Link>
       </div>
     </>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const ContentRow = ({ tag, className, children }) => {
+const ContentRow = ({ tag = 'div', className = '', children }) => {
   const Tag = tag;
 
   return (
@@ -18,14 +18,9 @@ const ContentRow = ({ tag, className, children }) => {
   );
 };
 
-ContentRow.defaultProps = {
-  className: '',
-  tag: 'div',
-};
-
 ContentRow.propTypes = {
   className: PropTypes.string,
-  tag: PropTypes.string.isRequired,
+  tag: PropTypes.string,
 };
 
 export default ContentRow;

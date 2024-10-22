@@ -18,7 +18,7 @@ const contentStyles = {
   6: 'text-md',
 };
 
-function Heading({ level, stylingLevel, className, children }) {
+function Heading({ level = 1, stylingLevel, className, children }) {
   if (!stylingLevel) {
     stylingLevel = level;
   }
@@ -37,14 +37,10 @@ function Heading({ level, stylingLevel, className, children }) {
 }
 
 Heading.propTypes = {
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   stylingLevel: PropTypes.oneOf([1, 2, 3, 5, 6]),
   className: PropTypes.string,
   children: PropTypes.string.isRequired,
-};
-
-Heading.defaultProps = {
-  level: 1,
 };
 
 export default Heading;

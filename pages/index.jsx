@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 import Button from '../components/Button';
@@ -33,7 +33,7 @@ export default function Accueil() {
             <br />
             <span className="text-5xl">Acupuncture</span>
           </h1>
-          <Link href="/prendre-un-rendez-vous" passHref>
+          <Link href="/prendre-un-rendez-vous" passHref legacyBehavior>
             <Button>Prendre un rendez-vous</Button>
           </Link>
         </div>
@@ -88,10 +88,8 @@ export default function Accueil() {
             exemple.
           </p>
           <div className="mt-3">
-            <Link href="/traitements" passHref>
-              <a className="link link-primary text-lg">
+            <Link href="/traitements" className="link link-primary text-lg">
                 En savoir plus sur la médecine traditionnelle chinoise
-              </a>
             </Link>
           </div>
         </ContentColumn>
@@ -129,10 +127,8 @@ export default function Accueil() {
             Prix des consultations en cabinet&nbsp;: 120 CHF
           </p>
           <div className="mt-3 mb-8">
-            <Link href="/prendre-un-rendez-vous" passHref>
-              <a className="link link-primary text-lg">
+            <Link href="/prendre-un-rendez-vous" className="link link-primary text-lg">
                 Prendre un rendez-vous
-              </a>
             </Link>
           </div>
           <div className="text-center">
@@ -175,10 +171,8 @@ export default function Accueil() {
             domicile.
           </p>
           <div className="mt-3 mb-6">
-            <Link href="/mon-parcours" passHref>
-              <a className="link link-primary text-lg">
+            <Link href="/mon-parcours" className="link link-primary text-lg">
                 En savoir plus sur mon parcours
-              </a>
             </Link>
           </div>
           <div className="max-w-md mx-auto">

@@ -1,5 +1,4 @@
-const withTM = require('next-transpile-modules')(['ol']);
-
-module.exports = withTM({
+module.exports = {
+  transpilePackages: ['ol'],
   reactStrictMode: true,
-});
+};
