@@ -1,8 +1,17 @@
 import Head from 'next/head';
+import { Lora } from '@next/font/google';
 
 import Layout from '../components/Layout';
 
 import '../styles/globals.css';
+
+const lora = Lora({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-lora',
+  display: 'swap',
+});
 
 function MyApp({ Component, pageProps }) {
   return (
