@@ -19,10 +19,11 @@ const navItems = [
 function PageHeader() {
   const [navVisible, setNavVisible] = useState(null);
   const router = useRouter();
+  const isBrowser = typeof window !== 'undefined';
 
   const showNav = () => {
     setNavVisible(true);
-    if (process.browser) {
+    if (isBrowser) {
       // Prevent page scrolling
       document.body.classList.add('overflow-y-hidden');
     }
@@ -30,7 +31,7 @@ function PageHeader() {
 
   const hideNav = () => {
     setNavVisible(navVisible === null ? null : false);
-    if (process.browser) {
+    if (isBrowser) {
       document.body.classList.remove('overflow-y-hidden');
     }
   };
@@ -76,7 +77,7 @@ function PageHeader() {
       ? 'animate-fade-in-from-invisible'
       : 'animate-fade-out-to-invisible';
 
-  if (process.browser) {
+  if (isBrowser) {
     document.body.classList.add('lg:overflow-y-auto');
   }
 
