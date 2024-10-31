@@ -27,7 +27,7 @@ export default function Accueil() {
       />
 
       <div className="relative isolate">
-        <div className="py-6 text-center bg-black bg-opacity-20 lg:py-20">
+        <div className="py-6 text-center bg-black/20 lg:py-20">
           <h1 className="mb-10 text-4xl leading-relaxed text-white text-shadow-xl text-shadow-blurry text-shadow-opacity-100 lg:mb-16">
             Léonard Ganty
             <br />

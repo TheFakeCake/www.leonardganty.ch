@@ -17,11 +17,11 @@ function PageFooter() {
         CH-1228 Plan-les-Ouates
       </address>
       <address className="my-2 not-italic" aria-label="Numéro de téléphone">
-        <PhoneNumber linkClassName="link text-lg ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200" />
+        <PhoneNumber linkClassName="link text-lg ring-amber-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-amber-200" />
       </address>
       <address className="not-italic" aria-label="Adresse e-mail">
         <a
-          className="link text-lg ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-yellow-200"
+          className="link text-lg ring-amber-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-amber-200"
           href={'mailto:' + emailAddress}
         >
           {emailAddress}
@@ -29,7 +29,7 @@ function PageFooter() {
       </address>
 
       <a
-        className="link inline-block w-44 mt-6 ring-yellow-200 ring-offset-primary-dark focus:ring-offset-4 hover:scale-105"
+        className="link inline-block w-44 mt-6 ring-amber-200 ring-offset-primary-dark focus:ring-offset-4 hover:scale-105"
         href="https://mouvementetsante.ch/"
       >
         <Image

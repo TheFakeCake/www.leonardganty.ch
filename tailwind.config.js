@@ -3,16 +3,11 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
-      './components/**/*.{js,ts,jsx,tsx}',
-      './lib/**/*.{js,ts,jsx,tsx}',
-    ],
-    safelist: ['ol-attribution', 'ol-control'], // can't use regex in JIT mode
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './lib/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -43,7 +38,6 @@ module.exports = {
         'fade-out-to-invisible': 'fadeOutToInvisible 200ms linear both',
       },
       colors: {
-        gray: colors.warmGray,
         primary: {
           light: colors.red['700'],
           DEFAULT: colors.red['800'],
@@ -71,9 +65,6 @@ module.exports = {
         max: '9999',
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     plugin(function({ addVariant, e }) {

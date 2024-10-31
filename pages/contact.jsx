@@ -34,7 +34,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="text-center text-lg sm:pl-4 sm:border-l sm:border-primary sm:border-opacity-30 sm:text-left">
+            <div className="text-center text-lg sm:pl-4 sm:border-l sm:border-primary/30 sm:text-left">
               <span className="block font-semibold">Téléphone</span>{' '}
               <PhoneNumber linkClassName="link link-primary" />
               <span className="block mt-2 font-semibold">E-mail</span>{' '}
@@ -51,7 +51,7 @@ export default function Contact() {
           <Heading>Adresse</Heading>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-[auto,18rem]">
-            <address className="mx-auto text-lg not-italic sm:order-2 sm:mx-0 sm:pl-4 sm:border-l sm:border-primary sm:border-opacity-30">
+            <address className="mx-auto text-lg not-italic sm:order-2 sm:mx-0 sm:pl-4 sm:border-l sm:border-primary/30">
               <strong>Cabinet Mouvement &amp; Santé</strong>
               <br />
               Route de Saint-Julien 129

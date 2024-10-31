@@ -1,14 +1,14 @@
 /* Map popup */
 
 .map-popup {
-  @apply absolute -left-full -translate-x-1/2 w-max px-3 py-2 rounded drop-shadow-md bg-gray-50;
+  @apply absolute -left-full -translate-x-1/2 w-max px-3 py-2 rounded drop-shadow-md bg-stone-50;
 
   filter: var(--tw-drop-shadow); /* work around fix */
   bottom: calc(100% + 8px);
 }
 
 .map-popup::after {
-  @apply border-gray-50;
+  @apply border-stone-50;
 
   content: '';
   position: absolute;
@@ -47,7 +47,7 @@
   left: 3.75em;
   top: 0.5em;
 
-  @apply px-2 bg-white bg-opacity-70 !important;
+  @apply px-2 bg-white/70 !important;
 }
 
 /* Openlayers overrides */
@@ -55,7 +55,7 @@
 .ol-attribution {
   bottom: var(--footer-wave-height) !important;
 
-  @apply bg-white bg-opacity-60 !important;
+  @apply bg-white/60 !important;
 }
 
 .ol-attribution li {
@@ -67,25 +67,25 @@
 }
 
 .ol-attribution a {
-  @apply text-gray-600 ring-primary hover:text-primary !important;
+  @apply text-stone-600 ring-primary hover:text-primary !important;
 }
 
 .ol-control button {
-  @apply transition bg-primary bg-opacity-[69%] text-white ring-primary-dark !important;
+  @apply transition bg-primary/[69%] text-white ring-primary-dark !important;
 }
 
 .ol-control button:focus {
-  @apply bg-opacity-80 outline-none ring-2 !important;
+  @apply bg-primary/80 outline-none ring-2 !important;
 }
 
 .ol-control button:hover {
-  @apply bg-opacity-95 outline-none !important;
+  @apply bg-primary/95 outline-none !important;
 }
 
 .ol-control button:focus:not(:focus-visible) {
-  @apply bg-opacity-[69%] ring-0 !important;
+  @apply bg-primary/[69%] ring-0 !important;
 }
 
 .ol-control button:focus:not(:focus-visible):hover {
-  @apply bg-opacity-95 !important;
+  @apply bg-primary/95 !important;
 }
