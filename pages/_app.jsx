@@ -1,5 +1,5 @@
+import { Lora } from 'next/font/google';
 import Head from 'next/head';
-import { Lora } from '@next/font/google';
 
 import Layout from '../components/Layout';
 

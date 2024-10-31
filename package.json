@@ -11,9 +11,8 @@
     "css-lint": "stylelint styles/**/*.css"
   },
   "dependencies": {
-    "@next/font": "^14.2.15",
     "focus-trap-react": "^10.3.0",
-    "next": "^13.5.7",
+    "next": "^14.2.16",
     "ol": "^10.2.1",
     "prop-types": "^15.7.2",
     "react": "^18.3.1",
@@ -22,8 +21,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
-    "eslint": "^7.29.0",
-    "eslint-config-next": "^13.5.7",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "14.2.16",
     "postcss": "^8.3.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
