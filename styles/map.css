@@ -1,7 +1,7 @@
 /* Map popup */
 
 .map-popup {
-  @apply absolute -left-full -translate-x-1/2 w-max px-3 py-2 rounded drop-shadow-md bg-stone-50;
+  @apply absolute -left-full w-max -translate-x-1/2 rounded bg-stone-50 px-3 py-2 drop-shadow-md;
 
   filter: var(--tw-drop-shadow); /* work around fix */
   bottom: calc(100% + 8px);
@@ -47,7 +47,7 @@
   left: 3.75em;
   top: 0.5em;
 
-  @apply px-2 bg-white/70 !important;
+  @apply bg-white/70 px-2 !important;
 }
 
 /* Openlayers overrides */
@@ -71,7 +71,7 @@
 }
 
 .ol-control button {
-  @apply transition bg-primary/[69%] text-white ring-primary-dark !important;
+  @apply bg-primary/[69%] text-white ring-primary-dark transition !important;
 }
 
 .ol-control button:focus {

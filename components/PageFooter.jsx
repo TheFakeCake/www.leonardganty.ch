@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 import PhoneNumber from './PhoneNumber';
 
@@ -21,7 +21,7 @@ function PageFooter() {
       </address>
       <address className="not-italic" aria-label="Adresse e-mail">
         <a
-          className="link text-lg ring-amber-200 ring-offset-primary-dark focus:ring-offset-4 hover:text-amber-200"
+          className="link text-lg ring-amber-200 ring-offset-primary-dark hover:text-amber-200 focus:ring-offset-4"
           href={'mailto:' + emailAddress}
         >
           {emailAddress}
@@ -29,7 +29,7 @@ function PageFooter() {
       </address>
 
       <a
-        className="link inline-block w-44 mt-6 ring-amber-200 ring-offset-primary-dark focus:ring-offset-4 hover:scale-105"
+        className="link mt-6 inline-block w-44 ring-amber-200 ring-offset-primary-dark hover:scale-105 focus:ring-offset-4"
         href="https://mouvementetsante.ch/"
       >
         <Image
@@ -63,7 +63,7 @@ function PageFooter() {
         />
       </div>
 
-      <div className="text-sm opacity-75 mt-6">
+      <div className="mt-6 text-sm opacity-75">
         &copy; Copyright Léonard Ganty - {year}
       </div>
       <div className="text-sm opacity-75">Réalisé par Benjamin Ganty.</div>

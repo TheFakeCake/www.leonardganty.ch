@@ -59,11 +59,15 @@ function PageHeader() {
   // Add a debounced window resize handler to hide the navigation if the window
   // becomes 1024px wide
   useEffect(() => {
-    const onResizeHandler = debounce(({}) => {
-      if (window.innerWidth >= 1024) {
-        hideNav();
-      }
-    }, 300, 1000);
+    const onResizeHandler = debounce(
+      ({}) => {
+        if (window.innerWidth >= 1024) {
+          hideNav();
+        }
+      },
+      300,
+      1000,
+    );
 
     window.addEventListener('resize', onResizeHandler);
 
@@ -74,8 +78,8 @@ function PageHeader() {
     navVisible === null
       ? 'invisible'
       : navVisible === true
-      ? 'animate-fade-in-from-invisible'
-      : 'animate-fade-out-to-invisible';
+        ? 'animate-fade-in-from-invisible'
+        : 'animate-fade-out-to-invisible';
 
   if (isBrowser) {
     document.body.classList.add('lg:overflow-y-auto');
@@ -84,11 +88,15 @@ function PageHeader() {
   return (
     <FocusTrap active={navVisible}>
       <header
-        className="fixed top-0 flex justify-between w-full h-16 px-4 py-1 text-stone-100 shadow-md z-max bg-primary lg:justify-center"
+        className="fixed top-0 z-max flex h-16 w-full justify-between bg-primary px-4 py-1 text-stone-100 shadow-md lg:justify-center"
         role="banner"
       >
-        <Link href="/" className="link self-center rounded-full text-amber-200 focus:ring-offset-0 hover:opacity-100 lg:hidden" aria-label="Page d'accueil">
-          <Logo className="w-12 h-12 text-primary-dark border-black bg-stone-50" />
+        <Link
+          href="/"
+          className="link self-center rounded-full text-amber-200 hover:opacity-100 focus:ring-offset-0 lg:hidden"
+          aria-label="Page d'accueil"
+        >
+          <Logo className="h-12 w-12 border-black bg-stone-50 text-primary-dark" />
         </Link>
 
         <BurgerButton
@@ -101,29 +109,33 @@ function PageHeader() {
 
         <nav
           className={
-            'fixed top-16 bottom-0 left-0 right-0 pt-8 pr-4 bg-primary overflow-y-auto ' +
-            'lg:static lg:pr-0 lg:pt-0 lg:w-full lg:max-w-2xl lg:visible lg:opacity-100 lg:animate-none lg:overflow-visible ' +
+            'fixed bottom-0 left-0 right-0 top-16 overflow-y-auto bg-primary pr-4 pt-8 ' +
+            'lg:visible lg:static lg:w-full lg:max-w-2xl lg:animate-none lg:overflow-visible lg:pr-0 lg:pt-0 lg:opacity-100 ' +
             navVisibleClass
           }
           id="mainNav"
         >
-          <ul className="flex flex-col text-2xl leading-relaxed lg:h-full lg:flex-row lg:justify-between lg:items-center lg:text-lg">
+          <ul className="flex flex-col text-2xl leading-relaxed lg:h-full lg:flex-row lg:items-center lg:justify-between lg:text-lg">
             {navItems.map(({ href, label }) => {
               return (
-                <li className="mb-5 text-right last:mb-3 lg:mb-0 lg:last:mb-0 lg:-mt-1.5" key={href}>
+                <li
+                  className="mb-5 text-right last:mb-3 lg:-mt-1.5 lg:mb-0 lg:last:mb-0"
+                  key={href}
+                >
                   <Link
                     href={href}
                     className={
-                      'pb-2 border-b-2 ring-amber-200 ring-offset-primary transition ' +
-                      'hover:text-amber-200 hover:border-amber-200 ' +
+                      'border-b-2 pb-2 ring-amber-200 ring-offset-primary transition ' +
+                      'hover:border-amber-200 hover:text-amber-200 ' +
                       'focus:outline-none focus:ring-2 focus:ring-offset-4 ' +
                       'focus-not-visible:ring-0 focus-not-visible:ring-offset-0 ' +
-                      'lg:pb-0.5 lg:border-b-0' +
+                      'lg:border-b-0 lg:pb-0.5' +
                       (router.pathname === href
-                        ? ' font-semibold text-amber-200 border-amber-200 lg:font-normal lg:border-b-2'
+                        ? ' border-amber-200 font-semibold text-amber-200 lg:border-b-2 lg:font-normal'
                         : '')
                     }
-                    aria-current={router.pathname === href ? 'page' : false}>
+                    aria-current={router.pathname === href ? 'page' : false}
+                  >
                     {label}
                   </Link>
                 </li>
@@ -132,7 +144,7 @@ function PageHeader() {
           </ul>
         </nav>
 
-        <Logo className="hidden lg:block absolute top-13 -mt-0.5 w-10 h-10 text-primary-dark bg-stone-50 border-primary-dark shadow-md" />
+        <Logo className="absolute top-13 -mt-0.5 hidden h-10 w-10 border-primary-dark bg-stone-50 text-primary-dark shadow-md lg:block" />
       </header>
     </FocusTrap>
   );

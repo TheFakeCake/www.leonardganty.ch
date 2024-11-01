@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 import Button from '../components/Button';
@@ -27,8 +27,8 @@ export default function Accueil() {
       />
 
       <div className="relative isolate">
-        <div className="py-6 text-center bg-black/20 lg:py-20">
-          <h1 className="mb-10 text-4xl leading-relaxed text-white text-shadow-xl text-shadow-blurry text-shadow-opacity-100 lg:mb-16">
+        <div className="bg-black/20 py-6 text-center lg:py-20">
+          <h1 className="text-shadow-xl text-shadow-blurry text-shadow-opacity-100 mb-10 text-4xl leading-relaxed text-white lg:mb-16">
             Léonard Ganty
             <br />
             <span className="text-5xl">Acupuncture</span>
@@ -63,7 +63,7 @@ export default function Accueil() {
             media="(min-width: 385px)"
           />
           <img
-            className="w-full h-full object-cover object-right-top md:object-center"
+            className="h-full w-full object-cover object-right-top md:object-center"
             src={nextOptimzedImageUrl(titleImageMobile.src, 384)}
             alt="Photo de manuscrits de médecine chinoise"
           />
@@ -89,7 +89,7 @@ export default function Accueil() {
           </p>
           <div className="mt-3">
             <Link href="/traitements" className="link link-primary text-lg">
-                En savoir plus sur la médecine traditionnelle chinoise
+              En savoir plus sur la médecine traditionnelle chinoise
             </Link>
           </div>
         </ContentColumn>
@@ -126,9 +126,12 @@ export default function Accueil() {
           <p className="my-2">
             Prix des consultations en cabinet&nbsp;: 120 CHF
           </p>
-          <div className="mt-3 mb-8">
-            <Link href="/prendre-un-rendez-vous" className="link link-primary text-lg">
-                Prendre un rendez-vous
+          <div className="mb-8 mt-3">
+            <Link
+              href="/prendre-un-rendez-vous"
+              className="link link-primary text-lg"
+            >
+              Prendre un rendez-vous
             </Link>
           </div>
           <div className="text-center">
@@ -170,12 +173,12 @@ export default function Accueil() {
             Genève en plus de ma pratique de l’acupuncture en cabinet et à
             domicile.
           </p>
-          <div className="mt-3 mb-6">
+          <div className="mb-6 mt-3">
             <Link href="/mon-parcours" className="link link-primary text-lg">
-                En savoir plus sur mon parcours
+              En savoir plus sur mon parcours
             </Link>
           </div>
-          <div className="max-w-md mx-auto">
+          <div className="mx-auto max-w-md">
             <Image src={photoLeonard} alt="Photo de Léonard Ganty" />
           </div>
         </ContentColumn>

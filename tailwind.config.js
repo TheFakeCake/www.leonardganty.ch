@@ -1,6 +1,6 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
@@ -21,7 +21,7 @@ module.exports = {
           },
           to: {
             opacity: 1,
-          }
+          },
         },
         fadeOutToInvisible: {
           from: {
@@ -30,7 +30,7 @@ module.exports = {
           to: {
             opacity: 0,
             visibility: 'hidden',
-          }
+          },
         },
       },
       animation: {
@@ -53,7 +53,7 @@ module.exports = {
         192: '48rem',
       },
       inset: {
-        '13': '3.25rem',
+        13: '3.25rem',
       },
       margin: {
         'footer-wave-height': 'var(--footer-wave-height)',
@@ -67,12 +67,12 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ addVariant, e }) {
+    plugin(function ({ addVariant, e }) {
       addVariant('focus-not-visible', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
-          return `.${e(`focus-not-visible${separator}${className}`)}:focus:not(:focus-visible)`
-        })
-      })
-    })
+          return `.${e(`focus-not-visible${separator}${className}`)}:focus:not(:focus-visible)`;
+        });
+      });
+    }),
   ],
 };

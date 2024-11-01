@@ -34,7 +34,7 @@ export default function Map() {
         },
         {
           rootMargin: '40px',
-        }
+        },
       );
 
       observer.observe(rootRef.current);
@@ -70,7 +70,7 @@ export default function Map() {
         Carte de Genève avec un marqueur à l’emplacement du cabinet de Léonard
         Ganty.
       </div>
-      <div className="absolute inset-0 shadow-inner z-10 pointer-events-none group-focus-visible:ring-2 group-focus-visible:ring-primary group-focus-visible:ring-inset"></div>
+      <div className="pointer-events-none absolute inset-0 z-10 shadow-inner group-focus-visible:ring-2 group-focus-visible:ring-inset group-focus-visible:ring-primary"></div>
       <div id="map-popup" className="map-popup">
         <strong>Mouvement &amp; Santé</strong>
         <br />

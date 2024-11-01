@@ -55,7 +55,7 @@ export default function MonParcours() {
           </p>
 
           <Quotation
-            className="mt-6 mr-3 text-right sm:mr-0"
+            className="mr-3 mt-6 text-right sm:mr-0"
             text="Plus le sage donne aux autres, plus il possède."
             author="Lao Tseu"
             source="Dao de jing"

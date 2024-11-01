@@ -19,7 +19,9 @@
   border: none;
   border-radius: var(--burger-btn-border-radius);
   vertical-align: middle;
-  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-btn:hover {
@@ -42,7 +44,10 @@
 }
 
 .burger-btn .burger-line {
-  --burger-btn-inner-size: calc(var(--burger-btn-size) - var(--burger-btn-padding) - var(--burger-btn-padding));
+  --burger-btn-inner-size: calc(
+    var(--burger-btn-size) - var(--burger-btn-padding) -
+      var(--burger-btn-padding)
+  );
   --burger-line-width: var(--burger-btn-inner-size);
   --burger-line-height: calc(var(--burger-btn-inner-size) / 16);
 
@@ -51,7 +56,12 @@
   width: var(--burger-line-width);
   height: var(--burger-line-height);
   background-color: var(--burger-btn-color);
-  transition: transform 0.3s, opacity 0.15s, top 0.3s, background-color 0.3s, color 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.15s,
+    top 0.3s,
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .burger-btn .burger-line.top {
@@ -65,7 +75,10 @@
 }
 
 .burger-btn .burger-line.bottom {
-  top: calc(var(--burger-btn-padding) + (var(--burger-btn-inner-size) * 0.85) - var(--burger-line-height));
+  top: calc(
+    var(--burger-btn-padding) + (var(--burger-btn-inner-size) * 0.85) -
+      var(--burger-line-height)
+  );
 }
 
 /* Toggled state */

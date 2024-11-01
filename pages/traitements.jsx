@@ -68,7 +68,7 @@ export default function Traitements() {
                 <dt className="font-semibold" key={`dt-${index}`}>
                   {dt}
                 </dt>,
-                <dd className="ml-4 mb-2 last:mb-0" key={`dd-${index}`}>
+                <dd className="mb-2 ml-4 last:mb-0" key={`dd-${index}`}>
                   {dd}
                 </dd>,
               ];

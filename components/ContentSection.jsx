@@ -12,15 +12,12 @@ function ContentSection({
   return (
     <section
       className={
-        'px-3 py-6 mx-auto max-w-prose box-content text-center' +
+        'mx-auto box-content max-w-prose px-3 py-6 text-center' +
         (className ? ` ${className}` : '')
       }
     >
       {heading && (
-        <Heading
-          level={headingLevel}
-          stylingLevel={headingStyle}
-        >
+        <Heading level={headingLevel} stylingLevel={headingStyle}>
           {heading}
         </Heading>
       )}

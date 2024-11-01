@@ -29,7 +29,7 @@ function OneDoc() {
 
   return (
     <iframe
-      className="od-widget w-full h-112 box-content border-0"
+      className="od-widget box-content h-112 w-full border-0"
       id="od-widget-a2636ad4cc2e8531ee5fdff8925ee9fd2ff3635f7253819175583d4b082ebff0"
       src="about:blank"
       ref={iframeRef}
