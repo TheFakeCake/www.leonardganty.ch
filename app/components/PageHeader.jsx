@@ -1,9 +1,11 @@
+'use client';
+
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useCallback, useEffect, useState } from 'react';
 import FocusTrap from 'focus-trap-react';
 
-import { debounce } from '../lib/utils';
+import { debounce } from '../../lib/utils';
 
 import BurgerButton from './BurgerButton';
 import Logo from './Logo';
@@ -18,7 +20,7 @@ const navItems = [
 
 function PageHeader() {
   const [navVisible, setNavVisible] = useState(null);
-  const router = useRouter();
+  const pathname = usePathname();
   const isBrowser = typeof window !== 'undefined';
 
   const showNav = () => {
@@ -29,12 +31,12 @@ function PageHeader() {
     }
   };
 
-  const hideNav = () => {
-    setNavVisible(navVisible === null ? null : false);
+  const hideNav = useCallback(() => {
+    setNavVisible((navVisible) => (navVisible === null ? null : false));
     if (isBrowser) {
       document.body.classList.remove('overflow-y-hidden');
     }
-  };
+  }, [setNavVisible, isBrowser]);
 
   const toggleNavVisible = () => {
     if (navVisible) {
@@ -44,17 +46,10 @@ function PageHeader() {
     }
   };
 
-  // Add handler on routerChangeComplete event to close the navigation after a
-  // new page finished loading
+  // Hide navigation on pathname change (page change)
   useEffect(() => {
-    const routeChangeCompleteHandler = hideNav;
-
-    router.events.on('routeChangeComplete', routeChangeCompleteHandler);
-
-    return () => {
-      router.events.off('routeChangeComplete', routeChangeCompleteHandler);
-    };
-  });
+    hideNav();
+  }, [pathname, hideNav]);
 
   // Add a debounced window resize handler to hide the navigation if the window
   // becomes 1024px wide
@@ -130,11 +125,11 @@ function PageHeader() {
                       'focus:outline-none focus:ring-2 focus:ring-offset-4 ' +
                       'focus-not-visible:ring-0 focus-not-visible:ring-offset-0 ' +
                       'lg:border-b-0 lg:pb-0.5' +
-                      (router.pathname === href
+                      (pathname === href
                         ? ' border-amber-200 font-semibold text-amber-200 lg:border-b-2 lg:font-normal'
                         : '')
                     }
-                    aria-current={router.pathname === href ? 'page' : false}
+                    aria-current={pathname === href ? 'page' : false}
                   >
                     {label}
                   </Link>

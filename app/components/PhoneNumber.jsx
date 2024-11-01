@@ -1,7 +1,9 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
-import { phoneNumber } from '../app-parameters';
-import { isMobile } from '../lib/utils';
+import { phoneNumber } from '../../app-parameters';
+import { isMobile } from '../../lib/utils';
 
 function PhoneNumber({ linkClassName }) {
   const [linkView, setLinkView] = useState(false);

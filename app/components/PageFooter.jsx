@@ -2,10 +2,10 @@ import Image from 'next/legacy/image';
 
 import PhoneNumber from './PhoneNumber';
 
-import logoMouvementEtSante from '../public/images/logo-mouvement-et-santé.png';
-import logoASCA from '../public/images/logo-asca.png';
-import logoRME from '../public/images/logo-rme.svg';
-import { emailAddress } from '../app-parameters';
+import logoMouvementEtSante from '../../public/images/logo-mouvement-et-santé.png';
+import logoASCA from '../../public/images/logo-asca.png';
+import logoRME from '../../public/images/logo-rme.svg';
+import { emailAddress } from '../../app-parameters';
 
 function PageFooter() {
   const year = new Date().getFullYear();

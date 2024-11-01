@@ -1,5 +1,5 @@
 import PageFooter from './PageFooter';
-import PageHeader from './PageHeader';
+import PageHeader from '../../components/PageHeader';
 
 function Layout({ children }) {
   return (

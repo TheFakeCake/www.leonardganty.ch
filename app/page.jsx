@@ -1,12 +1,11 @@
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 
-import Button from '../components/Button';
-import ContentColumn from '../components/layout/ContentColumn';
-import ContentRow from '../components/layout/ContentRow';
-import Heading from '../components/Heading';
-import Map from '../components/Map';
-import SEO from '../components/SEO';
+import Button from './components/Button';
+import ContentColumn from './components/layout/ContentColumn';
+import ContentRow from './components/layout/ContentRow';
+import Heading from './components/Heading';
+import Map from './components/Map';
 
 import logoASCA from '../public/images/logo-asca.png';
 import logoRME from '../public/images/logo-rme.svg';
@@ -14,18 +13,19 @@ import photoLeonard from '../public/images/photo-leonard-ganty.jpg';
 import titleImage from '../public/images/manuscrits-dynastie-qing.jpg';
 import titleImageMobile from '../public/images/manuscrits-dynastie-qing-mobile.jpg';
 
-function nextOptimzedImageUrl(src, width, quality = 75) {
+function nextOptimizedImageUrl(src, width, quality = 75) {
   return `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
 }
+
+export const metadata = {
+  title: 'Léonard Ganty - Acupuncture à Plan-les-Ouates, Genève',
+  description:
+    'Léonard Ganty vous accueil sur rendez-vous à Plan-les-Ouates pour des séances d’acupuncture et autres traitements de médecine traditionnelle chinoise.',
+};
 
 export default function Accueil() {
   return (
     <>
-      <SEO
-        title="Léonard Ganty - Acupuncture à Plan-les-Ouates, Genève"
-        description="Léonard Ganty vous accueil sur rendez-vous à Plan-les-Ouates pour des séances d’acupuncture et autres traitements de médecine traditionnelle chinoise."
-      />
-
       <div className="relative isolate">
         <div className="bg-black/20 py-6 text-center lg:py-20">
           <h1 className="text-shadow-xl text-shadow-blurry text-shadow-opacity-100 mb-10 text-4xl leading-relaxed text-white lg:mb-16">
@@ -39,36 +39,37 @@ export default function Accueil() {
         </div>
         <picture className="absolute inset-0 z-[-1]">
           <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 2048)}
+            srcSet={nextOptimizedImageUrl(titleImage.src, 2048)}
             media="(min-width: 1921px)"
           />
           <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 1920)}
+            srcSet={nextOptimizedImageUrl(titleImage.src, 1920)}
             media="(min-width: 1201px)"
           />
           <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 1200)}
+            srcSet={nextOptimizedImageUrl(titleImage.src, 1200)}
             media="(min-width: 1081px)"
           />
           <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 1080)}
+            srcSet={nextOptimizedImageUrl(titleImage.src, 1080)}
             media="(min-width: 829px)"
           />
           <source
-            srcSet={nextOptimzedImageUrl(titleImage.src, 828)}
+            srcSet={nextOptimizedImageUrl(titleImage.src, 828)}
             media="(min-width: 768px)"
           />
           <source
-            srcSet={nextOptimzedImageUrl(titleImageMobile.src, 640)}
+            srcSet={nextOptimizedImageUrl(titleImageMobile.src, 640)}
             media="(min-width: 385px)"
           />
           <img
             className="h-full w-full object-cover object-right-top md:object-center"
-            src={nextOptimzedImageUrl(titleImageMobile.src, 384)}
+            src={nextOptimizedImageUrl(titleImageMobile.src, 384)}
             alt="Photo de manuscrits de médecine chinoise"
           />
         </picture>
       </div>
+
       <ContentRow tag="section">
         <ContentColumn>
           <Heading level={2} stylingLevel={1}>
@@ -94,6 +95,7 @@ export default function Accueil() {
           </div>
         </ContentColumn>
       </ContentRow>
+
       <ContentRow tag="section">
         <ContentColumn>
           <Heading level={2} stylingLevel={1}>
@@ -158,6 +160,7 @@ export default function Accueil() {
           </div>
         </ContentColumn>
       </ContentRow>
+
       <ContentRow tag="section">
         <ContentColumn>
           <Heading level={2} stylingLevel={1}>
@@ -183,6 +186,7 @@ export default function Accueil() {
           </div>
         </ContentColumn>
       </ContentRow>
+
       <Map />
     </>
   );

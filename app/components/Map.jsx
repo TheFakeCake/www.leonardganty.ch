@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 
 export default function Map() {
@@ -7,7 +9,7 @@ export default function Map() {
 
   useEffect(() => {
     const loadAndCreateMap = async () => {
-      const { createMap, destroyMap } = await import('../lib/map');
+      const { createMap, destroyMap } = await import('../../lib/map');
 
       if (rootRef.current) {
         destroyMapRef.current = destroyMap;
