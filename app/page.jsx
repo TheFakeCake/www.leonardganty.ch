@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from './components/Button';
@@ -136,26 +136,18 @@ export default function Accueil() {
               Prendre un rendez-vous
             </Link>
           </div>
-          <div className="text-center">
+          <div className="flex justify-center gap-8">
             <Image
               src={logoASCA}
               alt="Logo de l'ASCA"
               title="Fondation suisse pour les médecines complémentaires"
-              className="inline-block"
-              width={160}
-              height={48}
-              objectFit="contain"
-              objectPosition="left"
+              height={52}
             />
             <Image
               src={logoRME}
               alt="Logo du RME"
               title="Registre de Médecine Empirique"
-              className="inline-block"
-              width={100}
-              height={48}
-              objectFit="contain"
-              objectPosition="right"
+              height={52}
             />
           </div>
         </ContentColumn>
@@ -181,9 +173,12 @@ export default function Accueil() {
               En savoir plus sur mon parcours
             </Link>
           </div>
-          <div className="mx-auto max-w-md">
-            <Image src={photoLeonard} alt="Photo de Léonard Ganty" />
-          </div>
+          <Image
+            src={photoLeonard}
+            alt="Photo de Léonard Ganty"
+            width={448}
+            className="mx-auto"
+          />
         </ContentColumn>
       </ContentRow>
 

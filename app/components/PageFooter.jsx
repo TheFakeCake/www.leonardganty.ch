@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 import PhoneNumber from './PhoneNumber';
 
@@ -29,37 +29,29 @@ function PageFooter() {
       </address>
 
       <a
-        className="link mt-6 inline-block w-44 ring-amber-200 ring-offset-primary-dark hover:scale-105 focus:ring-offset-4"
+        className="link mt-6 inline-block ring-amber-200 ring-offset-primary-dark hover:scale-105 focus:ring-offset-4"
         href="https://mouvementetsante.ch/"
       >
         <Image
           src={logoMouvementEtSante}
           alt="Logo de Mouvement et Santé"
           title="Le cabinet Mouvement et Santé dans lequel Léonard Ganty pratique l'acupuncture"
-          layout="responsive"
+          width={180}
         />
       </a>
 
-      <div className="mt-4">
+      <div className="mt-4 flex justify-center gap-4">
         <Image
           src={logoASCA}
           alt="Logo de l'ASCA"
           title="Fondation suisse pour les médecines complémentaires"
-          className="inline-block"
-          width={100}
           height={32}
-          objectFit="contain"
-          objectPosition="left"
         />
         <Image
           src={logoRME}
           alt="Logo de du RME"
           title="Registre de Médecine Empirique"
-          className="inline-block"
-          width={70}
           height={32}
-          objectFit="contain"
-          objectPosition="right"
         />
       </div>
 
