@@ -31,12 +31,17 @@ function PageHeader() {
     }
   };
 
-  const hideNav = useCallback(() => {
-    setNavVisible((navVisible) => (navVisible === null ? null : false));
-    if (isBrowser) {
-      document.body.classList.remove('overflow-y-hidden');
-    }
-  }, [setNavVisible, isBrowser]);
+  const hideNav = useCallback(
+    (withAnimation = true) => {
+      setNavVisible((navVisible) =>
+        navVisible === null || !withAnimation ? null : false,
+      );
+      if (isBrowser) {
+        document.body.classList.remove('overflow-y-hidden');
+      }
+    },
+    [setNavVisible, isBrowser],
+  );
 
   const toggleNavVisible = () => {
     if (navVisible) {
@@ -57,7 +62,7 @@ function PageHeader() {
     const onResizeHandler = debounce(
       ({}) => {
         if (window.innerWidth >= 1024) {
-          hideNav();
+          hideNav(false);
         }
       },
       300,
@@ -75,10 +80,6 @@ function PageHeader() {
       : navVisible === true
         ? 'animate-fade-in-from-invisible'
         : 'animate-fade-out-to-invisible';
-
-  if (isBrowser) {
-    document.body.classList.add('lg:overflow-y-auto');
-  }
 
   return (
     <FocusTrap active={navVisible}>
