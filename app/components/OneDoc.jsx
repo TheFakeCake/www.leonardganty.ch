@@ -78,7 +78,7 @@ function OneDoc() {
 
   return (
     <iframe
-      className="od-widget mb-4 mt-12 box-content w-full border-0"
+      className="od-widget my-2 box-content w-full border-0 lg:mb-6 lg:mt-12"
       id={`od-widget-${onedocId}`}
       src="about:blank"
       ref={iframeRef}
