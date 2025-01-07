@@ -4,25 +4,72 @@ import { useEffect, useRef } from 'react';
 
 function OneDoc() {
   const iframeRef = useRef();
+  const onedocId =
+    '7038f07318df7d5a9d26209060fd5cebc2e363ed620a53ecc6eb0136f9f18004';
 
   useEffect(() => {
-    function onMessageHandler(t) {
-      var e = t.data['od-widget-id'],
-        d = t.data['od-widget-height'],
-        a = t.data['od-widget-ios'];
-      if (e) {
-        const i = iframeRef.current;
-        d && (i.style.height = `calc(${d}px + var(--footer-wave-height))`),
-          !0 === a &&
-            ((i.style.width = '100px'),
-            (i.style['min-width'] = '100%'),
-            (i.scrolling = 'no'));
+    const widgetConfigs = {
+      [onedocId]: {
+        measurementIds: [],
+        hasGoogleTagTracking: false,
+        hasFusedeck: false,
+      },
+    };
+
+    function onMessageHandler(e) {
+      var t = e.data['od-widget-id'],
+        i = e.data['od-widget-height'],
+        d = e.data['od-widget-ios'];
+
+      if (t && t in widgetConfigs && onedocId === t) {
+        var a = iframeRef.current;
+        i && (a.style.height = `calc(${i}px + var(--footer-wave-height))`),
+          !0 === d &&
+            ((a.style.width = '100px'),
+            (a.style['min-width'] = '100%'),
+            (a.scrolling = 'no'));
+
+        var g = e.data['od-tracking-configs'];
+        void 0 !== g && (widgetConfigs[t].measurementIds = g);
+        var o = e.data['od-has-google-tag-manager'];
+        void 0 !== o && (widgetConfigs[t].hasGoogleTagTracking = o);
+        var f = e.data['od-has-fusedeck'];
+        void 0 !== f && (widgetConfigs[t].hasFusedeck = f);
+        var n = e.data.GA4;
+
+        if (widgetConfigs[t].hasGoogleTagTracking && window.dataLayer && n) {
+          var s = Object.keys(n.properties),
+            r = { event: n.name };
+          s.forEach(function (e) {
+            r[e] = n.properties[e];
+          }),
+            dataLayer.push(r);
+        }
+
+        if (widgetConfigs[t].hasFusedeck && window.fdData && n) {
+          var s = Object.keys(n.properties),
+            r = { event: n.name };
+          s.forEach(function (e) {
+            r[e] = n.properties[e];
+          }),
+            fdData.push(r);
+        }
+
+        if (n && void 0 !== window.gtag) {
+          for (var w = 0; w < widgetConfigs[t].measurementIds.length; w++) {
+            var f = widgetConfigs[t].measurementIds[w],
+              c = ((s = Object.keys(n.properties)), { send_to: f });
+            s.forEach(function (e) {
+              c[e] = n.properties[e];
+            }),
+              gtag('event', n.name, c);
+          }
+        }
       }
     }
 
     window.addEventListener('message', onMessageHandler);
-    iframeRef.current.src =
-      'https://www.onedoc.ch/fr/widget/a2636ad4cc2e8531ee5fdff8925ee9fd2ff3635f7253819175583d4b082ebff0';
+    iframeRef.current.src = `https://onedoc.ch/fr/widget/${onedocId}`;
 
     return () => {
       window.removeEventListener('message', onMessageHandler);
@@ -31,19 +78,11 @@ function OneDoc() {
 
   return (
     <iframe
-      className="od-widget box-content h-112 w-full border-0"
-      id="od-widget-a2636ad4cc2e8531ee5fdff8925ee9fd2ff3635f7253819175583d4b082ebff0"
+      className="od-widget mb-4 mt-12 box-content w-full border-0"
+      id={`od-widget-${onedocId}`}
       src="about:blank"
       ref={iframeRef}
-    >
-      <p className="my-8 pb-footer-wave-height">
-        Votre navigateur n’est pas compatible, merci de prendre rendez-vous
-        directement sur <em>OneDoc</em> à l’adresse{' '}
-        <a href="https://www.onedoc.ch/fr/acupuncteur/plan-les-ouates/pce3v/leonard-ganty">
-          https://www.onedoc.ch/fr/acupuncteur/plan-les-ouates/pce3v/leonard-ganty
-        </a>
-      </p>
-    </iframe>
+    ></iframe>
   );
 }
 
