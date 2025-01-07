@@ -13,7 +13,7 @@ npm run build
 # Pulling source, installing dependencies and removing current build on remote host
 ssh ${USER}@${HOST} sh -c "'
 
-source /home/leonardganty/nodevenv/www.leonardganty.ch/14/bin/activate
+source /home/leonardganty/nodevenv/www.leonardganty.ch/20/bin/activate
 cd $PROJECT_DIR
 git pull
 npm install
