@@ -6,6 +6,9 @@ export const metadata = {
   title: 'Les traitements d’acupuncture pratiqués par Léonard Ganty',
   description:
     'La médecine traditionnelle chinoise comprend de nombreuses techniques, dont l’acupuncture, pour traiter autant de maux et problèmes.',
+  alternates: {
+    canonical: '/traitements',
+  },
 };
 
 export default function Traitements() {

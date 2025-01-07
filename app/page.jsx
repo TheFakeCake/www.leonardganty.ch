@@ -21,6 +21,9 @@ export const metadata = {
   title: 'Léonard Ganty - Acupuncture à Plan-les-Ouates, Genève',
   description:
     'Léonard Ganty vous accueil sur rendez-vous à Plan-les-Ouates pour des séances d’acupuncture et autres traitements de médecine traditionnelle chinoise.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Accueil() {

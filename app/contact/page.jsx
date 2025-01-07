@@ -11,6 +11,9 @@ export const metadata = {
   title: 'Contacter Léonard Ganty - Acupuncture',
   description:
     'Le numéro de téléphone de Léonard Ganty et l’adresse du cabinet où il pratique l’acupuncture.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function Contact() {

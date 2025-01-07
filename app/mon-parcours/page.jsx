@@ -7,6 +7,9 @@ export const metadata = {
   title: 'Le parcours et les formations d’acupuncteur de Léonard Ganty',
   description:
     'Léonard Ganty a effectué sa formation d’acupuncture à Genève en parallèle de sa pratique de physiothérapeute.',
+  alternates: {
+    canonical: '/mon-parcours',
+  },
 };
 
 export default function MonParcours() {
