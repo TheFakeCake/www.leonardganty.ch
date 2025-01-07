@@ -23,8 +23,8 @@
 }
 
 @layer components {
-  @import './burger-button.css';
-  @import './map.css';
+  @import url('./burger-button.css');
+  @import url('./map.css');
 
   /* Page Footer */
   .page-footer {
@@ -161,30 +161,39 @@
   .text-shadow-opacity-100 {
     --text-shadow-opacity: 100%;
   }
+
   .text-shadow-opacity-90 {
     --text-shadow-opacity: 90%;
   }
+
   .text-shadow-opacity-80 {
     --text-shadow-opacity: 80%;
   }
+
   .text-shadow-opacity-70 {
     --text-shadow-opacity: 70%;
   }
+
   .text-shadow-opacity-60 {
     --text-shadow-opacity: 60%;
   }
+
   .text-shadow-opacity-50 {
     --text-shadow-opacity: 50%;
   }
+
   .text-shadow-opacity-40 {
     --text-shadow-opacity: 40%;
   }
+
   .text-shadow-opacity-30 {
     --text-shadow-opacity: 30%;
   }
+
   .text-shadow-opacity-20 {
     --text-shadow-opacity: 20%;
   }
+
   .text-shadow-opacity-10 {
     --text-shadow-opacity: 10%;
   }
